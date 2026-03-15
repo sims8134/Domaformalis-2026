@@ -4,8 +4,11 @@ import Footer from "../../components/Footer";
 import { Poppins, Nunito } from "next/font/google";
 import { getDictionary } from "../lib/get-dictionary";
 export const metadata = {
-  metadataBase: new URL("https://www.domaformalis.com")
-}
+  metadataBase: new URL("https://www.domaformalis.com"),
+  verification: {
+    google: "63kCAt3u-DNOKdM5PZusXpP3pNx-aT18ISRZ6LmCCr0",
+  },
+};
 
 const poppins = Poppins({
   subsets: ["latin"],
