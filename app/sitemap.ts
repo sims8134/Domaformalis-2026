@@ -1,33 +1,32 @@
-import { MetadataRoute } from "next";
+export default function sitemap() {
+  const baseUrl = "https://www.domaformalis.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-
-  const base = "https://www.domaformalis.com";
-
-  const langs = ["fr","en","es","bg"];
-
-  const pages = [
+  const routes = [
     "",
-    "/formations",
-    "/ressources",
-    "/quisommesnous",
-    "/contact",
-    "/membres",
-    "/legal",
-    "/confidentialite",
-    "/cgu"
+    "/fr",
+    "/en",
+    "/es",
+    "/bg",
+    "/fr/formations",
+    "/en/formations",
+    "/es/formations",
+    "/bg/formations",
+    "/fr/ressources",
+    "/en/ressources",
+    "/es/ressources",
+    "/bg/ressources",
+    "/fr/contact",
+    "/en/contact",
+    "/es/contact",
+    "/bg/contact",
+    "/fr/quisommesnous",
+    "/en/quisommesnous",
+    "/es/quisommesnous",
+    "/bg/quisommesnous"
   ];
 
-  const urls = [];
-
-  for (const lang of langs) {
-    for (const page of pages) {
-      urls.push({
-        url: `${base}/${lang}${page}`,
-        lastModified: new Date(),
-      });
-    }
-  }
-
-  return urls;
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+  }));
 }
