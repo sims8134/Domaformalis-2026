@@ -1,0 +1,893 @@
+{
+  "Navigation": {
+    "home": "Inicio",
+    "formations": "Formaciones",
+    "ressources": "Recursos",
+    "about": "¿Quiénes somos?",
+    "contact": "Contacto",
+    "members": "Área de miembros"
+  },"seo": {
+  "home": {
+    "title": "Domaformalis | Formaciones y recursos educativos",
+    "description": "Descubre formaciones en idiomas, informática y habilidades digitales accesibles para todos."
+  },
+  "formations": {
+    "title": "Formaciones | Domaformalis",
+    "description": "Explora todas las formaciones de Domaformalis: idiomas, tecnología, IA y multimedia."
+  },
+  "resources": {
+    "title": "Recursos gratuitos | Domaformalis",
+    "description": "Recursos útiles, consejos prácticos y guías para progresar."
+  },
+  "members": {
+    "title": "Área de miembros | Domaformalis",
+    "description": "Recibe información sobre el lanzamiento del área de miembros."
+  },
+  "about": {
+    "title": "Quiénes somos | Domaformalis",
+    "description": "Conoce la misión, los valores y el equipo de Domaformalis."
+  },
+  "contact": {
+    "title": "Contacto | Domaformalis",
+    "description": "Contacta con el equipo de Domaformalis."
+  },
+  "legal": {
+    "title": "Aviso legal | Domaformalis",
+    "description": "Información legal sobre el sitio web Domaformalis."
+  },
+  "privacy": {
+    "title": "Política de privacidad | Domaformalis",
+    "description": "Información sobre la recopilación y el uso de datos personales."
+  },
+  "cgu": {
+    "title": "Condiciones de uso | Domaformalis",
+    "description": "Consulta las condiciones de uso del sitio web."
+  }
+},
+  "hero": {
+  "surtitle": "BIENVENIDO A DOMAFORMALIS.COM",
+  "title": "La formación fácil para todos y en todas partes",
+  "desc": "Formaciones en idiomas, ofimática y digital — accesibles, claras y adaptadas a todos los niveles.",
+  "btn_formations": "Ver formaciones",
+  "btn_contact": "Contactarnos",
+  "levels_desc": "3 niveles · Principiante → Avanzado"
+},
+    "cards": {
+      "spanish": "Español",
+      "french": "Francés",
+      "bulgarian": "Búlgaro",
+      "levels": "3 niveles · Principiante → Avanzado"
+  },
+  "Values": {
+    "tag": "💡 Nuestros valores",
+    "title": "Lo que nos guía",
+    "list": {
+      "accessibility": {
+        "title": "Accesibilidad",
+        "desc": "Diseñado para todos."
+      },
+      "kindness": {
+        "title": "Amabilidad",
+        "desc": "Una pedagogía cercana."
+      },
+      "openness": {
+        "title": "Apertura",
+        "desc": "Curiosidad y cultura global."
+      }
+    }
+  },
+  "CTA": {
+    "title": "¿Quieres saber más?",
+    "desc": "Descubre nuestras formaciones o contáctanos directamente."
+  },
+  "Formations": {
+    "badge": "CATÁLOGO",
+    "title": "Nuestras formaciones",
+    "subtitle": "Ofimática, idiomas, IA y redes sociales — materiales claros para progresar a tu ritmo.",
+    "tabs": {
+      "languages": "Idiomas",
+      "it": "Informática",
+      "ia": "IA",
+      "social": "Redes Sociales",
+      "multimedia": "Multimedia"
+    },
+    "course_titles": {
+      "english": "Inglés",
+      "bulgarian": "Búlgaro"
+    },
+    "levels": {
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzado",
+      "access": "Acceder →"
+    },
+    "descriptions": {
+      "eng_beg": "Bases del idioma, vocabulario cotidiano y gramática esencial.",
+      "eng_int": "Profundización gramatical, comprensión oral y expresión escrita.",
+      "eng_adv": "Dominio avanzado, modismos, matices y comunicación profesional.",
+      "bg_beg": "Alfabeto cirílico, saludos y expresiones básicas.",
+      "bg_int": "Conjugación, construcción de frases y vocabulario ampliado.",
+      "bg_adv": "Expresión fluida, textos complejos y cultura búlgara."
+    }
+  },
+  "Carousel": {
+    "tag": "✨ FUNDADORES",
+    "title": "¿Quiénes somos?",
+    "subtitle": "Dos perfiles complementarios, una misma misión: hacer la formación más clara, más humana y más accesible.",
+    "founders": [
+      {
+        "name": "Simon",
+        "role": "Cofundador • Informática",
+        "exp": "+8 años",
+        "expLabel": "de experiencia",
+        "bio": "En 2017, me ofrecí voluntario para realizar un Servicio Cívico como mediador digital. Mi misión: formar a personal en situación de discapacidad en herramientas de ofimática. Allí descubrí una verdadera pasión por la pedagogía que hoy comparto con vosotros.",
+        "pills": [
+          "Para todos",
+          "Pedagogía amable",
+          "Materiales claros",
+          "100% en línea"
+        ]
+      },
+      {
+        "name": "Yasmine",
+        "role": "Cofundadora • Idiomas",
+        "exp": "+5 años",
+        "expLabel": "de experiencia",
+        "bio": "Apasionada por los idiomas y la comunicación intercultural, acompaño a los estudiantes en el dominio del Francés y del Español. Mi enfoque se basa en el intercambio y la confianza para superar las barreras lingüísticas.",
+        "pills": [
+          "Experiencia en idiomas",
+          "Enfoque humano",
+          "Contenidos adaptados",
+          "Seguimiento personalizado"
+        ]
+      }
+    ]
+  },
+  "founders": [
+    {
+      "name": "Simon",
+      "role": "Cofundador • Informática",
+      "description": "En 2017, me ofrecí voluntario para realizar un Servicio Cívico como mediador digital. Mi misión: formar a personal en situación de discapacidad en herramientas de ofimática. Allí descubrí una verdadera pasión por la pedagogía que hoy comparto con vosotros.",
+      "experience": "+8 años",
+      "image": "/img/founder-simon.jpg",
+      "tags": [
+        "Para todos",
+        "Pedagogía amable",
+        "Materiales claros",
+        "100% en línea"
+      ]
+    },
+    {
+      "name": "Yasmine",
+      "role": "Cofundadora • Idiomas",
+      "description": "Apasionada por los idiomas y la transmisión del conocimiento, he diseñado estas formaciones para que sean simples, dinámicas y accesibles para todos. Mi objetivo es darte las claves para comunicarte con confianza en un nuevo idioma.",
+      "experience": "+5 años",
+      "image": "/img/founder-yasmine.jpg",
+      "tags": [
+        "Francés",
+        "Español",
+        "Búlgaro",
+        "Inglés"
+      ]
+    }
+  ],
+  "contact": {
+    "hero": {
+      "tag": "📩 CONTÁCTANOS",
+      "title": "Hablemos de tu <span>proyecto</span>",
+      "desc": "¿Una pregunta, una solicitud de presupuesto o simplemente ganas de saber más? Escríbenos, ¡respondemos rápido!"
+    },
+    "info": {
+      "email_title": "Correo electrónico",
+      "fast_title": "Respuesta rápida",
+      "fast_desc": "Solemos responder en un plazo de 24 a 48 horas.",
+      "team_title": "Nuestro equipo",
+      "simon_role": "Informática y digital",
+      "yasmine_role": "Idiomas y pedagogía",
+      "social_title": "Síguenos"
+    },
+    "form": {
+      "title": "Envíanos un mensaje",
+      "desc": "Rellena el formulario de abajo, te responderemos en 48 horas.",
+      "lastname": "Apellido",
+      "firstname": "Nombre",
+      "email": "Correo electrónico",
+      "subject": "Asunto",
+      "subject_placeholder": "-- Elige un asunto --",
+      "subject_options": {
+        "devis": "Solicitud de presupuesto",
+        "info": "Solicitud de información",
+        "langues": "Cursos de idiomas",
+        "it": "Formación informática",
+        "autre": "Otro"
+      },
+      "message": "Mensaje",
+      "message_placeholder": "Describe tu solicitud en unas líneas...",
+      "rgpd_text": "Acepto que mis datos sean utilizados para tramitar mi solicitud.",
+      "privacy_link": "Política de privacidad",
+      "submit": "Enviar mensaje"
+    },
+    "success": {
+      "title": "¡Mensaje enviado!",
+      "desc": "Gracias por tu mensaje. Te responderemos dentro de las próximas 48 horas."
+    }
+  },
+  "faq": {
+    "tag": "❓ FAQ",
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "¿Cómo recibo mi formación después del pedido?",
+        "a": "Después de la confirmación de tu solicitud y del pago, recibirás tu formación en PDF directamente por correo electrónico, generalmente dentro de las 24 horas."
+      },
+      {
+        "q": "¿Las formaciones son adecuadas para principiantes absolutos?",
+        "a": "Sí, ¡absolutamente! Nuestras formaciones están diseñadas para ser accesibles a todos, incluso a quienes nunca han usado un ordenador o aprendido un idioma extranjero."
+      },
+      {
+        "q": "¿Puedo comprar varias formaciones al mismo tiempo?",
+        "a": "¡Claro! Contáctanos a través de este formulario indicando las formaciones deseadas y te prepararemos un presupuesto agrupado."
+      },
+      {
+        "q": "¿Hay seguimiento o acompañamiento después de la compra?",
+        "a": "Sí, seguimos disponibles por correo electrónico para responder a tus preguntas sobre el contenido de la formación que hayas comprado."
+      },
+      {
+        "q": "¿Las formaciones están disponibles en varios idiomas?",
+        "a": "Por el momento, los materiales informáticos están en francés. Los cursos de idiomas (Español, Búlgaro, Inglés) están diseñados para estudiantes francófonos."
+      }
+    ]
+  },
+  "res": {
+    "hero": {
+      "tag": "📚 Recursos gratuitos",
+      "title": "Tus <span>recursos</span> en línea",
+      "desc": "Fichas de repaso, enlaces útiles y consejos prácticos — todo lo que necesitas para progresar entre formaciones."
+    },
+    "fiches": {
+      "tag": "📄 Fichas de repaso",
+      "title": "Descarga nuestras fichas gratuitas",
+      "desc": "Resúmenes claros para tener a mano y repasar rápidamente los puntos esenciales."
+    },
+    "liens": {
+      "tag": "🔗 Enlaces útiles",
+      "title": "Sitios y herramientas recomendados",
+      "desc": "Una selección de recursos en línea para complementar tu aprendizaje."
+    },
+    "conseils": {
+      "tag": "💡 Consejos prácticos",
+      "title": "Aprende mejor, aprende más",
+      "desc": "Algunos hábitos sencillos para sacar el máximo partido a tus formaciones."
+    }
+  },
+  "fiche": {
+    "word": {
+      "title": "Ficha Word",
+      "desc": "Los atajos de teclado, los estilos y la maquetación de Word resumidos en una página."
+    },
+    "excel": {
+      "title": "Ficha Excel",
+      "desc": "Las fórmulas esenciales, los atajos y las funciones básicas de Excel."
+    },
+    "ppt": {
+      "title": "Ficha PowerPoint",
+      "desc": "Las buenas prácticas de diseño y los atajos de PowerPoint."
+    },
+    "es": {
+      "title": "Ficha Español",
+      "desc": "Los verbos irregulares, las conjugaciones esenciales y el vocabulario básico."
+    },
+    "fr": {
+      "title": "Ficha Francés",
+      "desc": "Las reglas de concordancia, las conjugaciones y las trampas ortográficas más comunes."
+    },
+    "secu": {
+      "title": "Ficha Seguridad",
+      "desc": "Las buenas prácticas para navegar con seguridad y proteger tus datos personales."
+    },
+    "pages": "1 página · PDF",
+    "dl": "⬇ Descargar"
+  },
+  "liens": {
+    "info": {
+      "title": "Informática y Ofimática"
+    },
+    "langues": {
+      "title": "Idiomas"
+    },
+    "multimedia": {
+      "title": "Multimedia"
+    },
+    "autres": {
+      "title": "Otros recursos"
+    },
+    "placeholder": {
+      "name": "Enlace próximamente",
+      "desc": "Descripción del sitio o del recurso"
+    }
+  },
+  "conseil": {
+    "1": {
+      "title": "Practica con regularidad",
+      "desc": "15 minutos al día valen más que 2 horas el fin de semana. La constancia es la clave de la memorización duradera."
+    },
+    "2": {
+      "title": "Toma apuntes",
+      "desc": "Anota los puntos importantes a mano — refuerza la memoria mucho más que una simple lectura."
+    },
+    "3": {
+      "title": "Repasa con las fichas",
+      "desc": "Ten nuestras fichas a mano y reléelas con regularidad para fijar las nociones esenciales."
+    }
+  },
+  "page": {
+    "formations": {
+      "tag": "📖 Catálogo completo",
+      "title": "Todas nuestras <span>formaciones</span>",
+      "desc": "Idiomas, ofimática, multimedia, IA — contenidos claros, progresivos y accesibles para todos los niveles."
+    }
+  },
+  "stats": {
+    "formations": {
+      "value": "14+",
+      "label": "formaciones"
+    },
+    "langues": {
+      "value": "4",
+      "label": "idiomas enseñados"
+    },
+    "niveaux": {
+      "value": "3",
+      "label": "Niveles / Formaciones"
+    },
+    "online": {
+      "value": "100%",
+      "label": "en línea"
+    }
+  },
+  "sec": {
+    "cat": {
+      "tag": "🗂️ Explorar por categoría",
+      "title": "Elige tu área",
+      "desc": "Selecciona una categoría para descubrir todas las formaciones disponibles."
+    }
+  },
+  "tab": {
+    "langues": "🌍 Idiomas",
+    "informatique": "💻 Informática",
+    "multimedia": "🎬 Multimedia",
+    "ia": "🤖 IA",
+    "reseaux": "📱 Redes Sociales"
+  },
+  "lang": {
+    "es": {
+      "name": "Español",
+      "debutant": {
+        "title": "Español A1-A2",
+        "desc": "Bases del español, verbos esenciales y primeras conversaciones."
+      },
+      "intermediaire": {
+        "title": "Español B1-B2",
+        "desc": "Conjugación de los tiempos clave, lectura y expresión habitual."
+      },
+      "avance": {
+        "title": "Español C1-C2",
+        "desc": "Sutilezas gramaticales, subjuntivo y español profesional."
+      }
+    },
+    "fr": {
+      "name": "Francés",
+      "debutant": {
+        "title": "Francés A1-A2",
+        "desc": "Fonética, gramática básica y vocabulario fundamental."
+      },
+      "intermediaire": {
+        "title": "Francés B1-B2",
+        "desc": "Ortografía, expresión escrita y oral de la vida cotidiana."
+      },
+      "avance": {
+        "title": "Francés C1-C2",
+        "desc": "Redacción avanzada, literatura y comunicación profesional."
+      }
+    },
+    "bg": {
+      "name": "Búlgaro",
+      "debutant": {
+        "title": "Búlgaro A1-A2",
+        "desc": "Alfabeto cirílico, saludos y expresiones básicas."
+      },
+      "intermediaire": {
+        "title": "Búlgaro B1-B2",
+        "desc": "Conjugación, construcción de frases y vocabulario ampliado."
+      },
+      "avance": {
+        "title": "Búlgaro C1-C2",
+        "desc": "Expresión fluida, textos complejos y cultura búlgara."
+      }
+    },
+    "en": {
+      "name": "Inglés",
+      "debutant": {
+        "title": "Inglés A1-A2",
+        "desc": "Bases del idioma, vocabulario cotidiano y gramática esencial."
+      },
+      "intermediaire": {
+        "title": "Inglés B1-B2",
+        "desc": "Profundización gramatical, comprensión oral y expresión escrita."
+      },
+      "avance": {
+        "title": "Inglés C1-C2",
+        "desc": "Dominio avanzado, modismos, matices y comunicación profesional."
+      }
+    }
+  },
+  "niveau": {
+    "debutant": "Principiante"
+  },
+  "btn": {
+    "access": "Acceder →"
+  },
+  "form": {
+    "word": {
+      "title": "Formación Word",
+      "pages": "57 páginas"
+    },
+    "hours": "~10 horas",
+    "level": {
+      "beginner": "Principiante",
+      "beginner_inter": "Principiante / Inter."
+    },
+    "btn": "Acceder →"
+  },
+  "multimedia": {
+    "video": {
+      "title": "Edición de vídeo",
+      "tools": "DaVinci Resolve / Premiere Pro"
+    }
+  },
+  "ia": {
+    "title": "Formaciones IA — Próximamente disponibles",
+    "desc": "Comprender y utilizar la inteligencia artificial en la vida diaria, ChatGPT, automatización y mucho más.",
+    "btn": "Avísame cuando salga"
+  },
+  "reseaux": {
+    "title": "Formaciones Redes Sociales — Próximamente disponibles",
+    "desc": "Facebook, Instagram, LinkedIn... Aprende a usar las redes sociales con confianza y eficacia.",
+    "btn": "Avísame cuando salga"
+  },
+  "cta": {
+    "title": "¿Listo para ir más lejos?",
+    "desc": "Descubre todas nuestras formaciones o contáctanos para un acompañamiento personalizado.",
+    "btn1": "📚 Ver las formaciones",
+    "btn2": "Contactarnos"
+  },
+  "qsn": {
+    "hero": {
+      "tag": "👋 Nuestro equipo",
+      "title": "¿Quiénes <span>somos</span>?",
+      "desc": "Dos apasionados de la pedagogía y la transmisión del conocimiento, unidos para hacer la formación accesible a todos."
+    },
+    "mission": {
+      "title": "Nuestra misión",
+      "p1": "En <strong>Domaformalis</strong>, creemos que <strong>todo el mundo merece aprender</strong>, sin importar su nivel inicial, su edad o su situación.",
+      "p2": "Simon y Yasmine forman un equipo complementario: <strong>informática y digital</strong> por un lado, <strong>idiomas y cultura</strong> por el otro."
+    },
+    "equipe": {
+      "tag": "👥 El equipo",
+      "title": "Simon y Yasmine"
+    },
+    "simon": {
+      "role": "Cofundador · Informática",
+      "p1": "En 2017, con 24 años, Simon realizó un Servicio Cívico de 8 meses como mediador digital en un ESAT. Allí formó a personal en situación de discapacidad en herramientas informáticas y descubrió una verdadera pasión por la pedagogía.",
+      "p2": "Desde entonces, pone esa pasión al servicio de todos creando formaciones claras, ilustradas y accesibles incluso para principiantes absolutos.",
+      "tags": [
+        "💻 Ofimática",
+        "🤖 Inteligencia Artificial",
+        "📱 Redes Sociales",
+        "🎬 Multimedia"
+      ]
+    },
+    "yasmine": {
+      "role": "Cofundadora · Idiomas",
+      "p1": "Apasionada por los idiomas y las culturas, Yasmine es la referente de idiomas de Domaformalis. Diseña materiales pedagógicos para el aprendizaje de idiomas, adaptados a todos los niveles.",
+      "p2": "Su pedagogía amable y su conocimiento profundo de cada idioma la convierten en el pilar de las formaciones lingüísticas del proyecto.",
+      "tags": [
+        {
+          "label": "🇪🇸 Español",
+          "lang": true
+        },
+        {
+          "label": "🇫🇷 Francés",
+          "lang": true
+        },
+        {
+          "label": "🇧🇬 Búlgaro",
+          "lang": true
+        },
+        {
+          "label": "🎓 3 niveles por idioma",
+          "lang": false
+        }
+      ]
+    },
+    "valeurs": {
+      "tag": "💡 Nuestros valores",
+      "title": "Lo que nos guía",
+      "items": [
+        {
+          "icon": "🤝",
+          "title": "Accesibilidad",
+          "desc": "Nuestras formaciones están diseñadas para ser comprendidas por todos, sin requisitos previos especiales."
+        },
+        {
+          "icon": "❤️",
+          "title": "Amabilidad",
+          "desc": "Creemos en una pedagogía suave y alentadora. Cada uno avanza a su ritmo, sin juicios."
+        },
+        {
+          "icon": "🌍",
+          "title": "Apertura",
+          "desc": "Informática, idiomas, cultura... Cultivamos la curiosidad y la apertura al mundo."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Quieres saber más?",
+      "desc": "Descubre nuestras formaciones o contáctanos directamente, ¡respondemos rápido!",
+      "btn1": "📚 Ver las formaciones",
+      "btn2": "✉️ Contactarnos"
+    }
+  },
+  "legal": {
+    "hero": {
+      "tag": "📜 Información legal",
+      "title": "Aviso legal",
+      "desc": "De conformidad con la Ley n.º 2004-575 de 21 de junio de 2004 para la confianza en la economía digital."
+    },
+    "updated": "Última actualización: [POR COMPLETAR — ej. marzo de 2026]",
+    "sections": [
+      {
+        "title": "1. Editor del sitio",
+        "content": [
+          "El sitio <strong>domaformalis.com</strong> es editado por:",
+          "<strong>Nombre / Razón social:</strong> [POR COMPLETAR]",
+          "<strong>Forma jurídica:</strong> [POR COMPLETAR — ej. autónomo, SRL, SAS…]",
+          "<strong>Domicilio social:</strong> [POR COMPLETAR — dirección completa]",
+          "<strong>SIRET:</strong> [POR COMPLETAR]",
+          "<strong>Número de IVA intracomunitario:</strong> [POR COMPLETAR o « No sujeto »]",
+          "<strong>Responsable de la publicación:</strong> Simon [POR COMPLETAR — apellido]",
+          "<strong>Contacto:</strong> contact@domaformalis.com"
+        ]
+      },
+      {
+        "title": "2. Alojamiento",
+        "content": [
+          "El sitio está alojado por:",
+          "<strong>Vercel Inc.</strong>",
+          "440 N Barranca Ave #4133, Covina, CA 91723, Estados Unidos",
+          "Sitio web: <a href=\"https://vercel.com\" target=\"_blank\" rel=\"noopener\">vercel.com</a>"
+        ]
+      },
+      {
+        "title": "3. Propiedad intelectual",
+        "content": [
+          "Todo el contenido del sitio domaformalis.com (textos, imágenes, logotipos, formaciones, maquetación, gráficos) está protegido por el derecho de autor y la normativa de propiedad intelectual.",
+          "Cualquier reproducción, representación, modificación o explotación, total o parcial, de estos contenidos, por cualquier procedimiento, sin la autorización previa por escrito del editor, está estrictamente prohibida y constituye una infracción sancionada por la normativa aplicable."
+        ]
+      },
+      {
+        "title": "4. Datos personales",
+        "content": [
+          "La información recopilada a través del formulario de contacto (apellido, nombre, correo electrónico, mensaje) se utiliza únicamente para responder a tu solicitud. No se vende ni se cede a terceros.",
+          "De conformidad con el Reglamento General de Protección de Datos (RGPD) y la normativa aplicable, dispones de un derecho de acceso, rectificación, supresión y oposición respecto a tus datos personales.",
+          "Para ejercer estos derechos, contáctanos en: <strong>contact@domaformalis.com</strong>"
+        ]
+      },
+      {
+        "title": "5. Cookies",
+        "content": [
+          "El sitio domaformalis.com puede utilizar cookies técnicas necesarias para el buen funcionamiento del sitio (preferencia de idioma, sesión).",
+          "No se utilizan cookies publicitarias ni de seguimiento. No se transmite ningún dato a redes publicitarias."
+        ]
+      },
+      {
+        "title": "6. Responsabilidad",
+        "content": [
+          "El editor se esfuerza por proporcionar información lo más precisa posible. No obstante, no podrá ser considerado responsable de omisiones, inexactitudes o errores contenidos en el sitio.",
+          "El editor no puede ser considerado responsable del uso que se haga de la información y los contenidos presentes en el sitio. El usuario es el único responsable del uso que haga de ellos."
+        ]
+      },
+      {
+        "title": "7. Enlaces hipertextuales",
+        "content": [
+          "El sitio puede contener enlaces a otros sitios web. El editor no ejerce ningún control sobre dichos sitios y declina toda responsabilidad respecto a su contenido."
+        ]
+      },
+      {
+        "title": "8. Legislación aplicable",
+        "content": [
+          "El presente aviso legal se rige por la legislación francesa. En caso de litigio, solo los tribunales franceses serán competentes."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "hero": {
+      "tag": "🔒 Privacidad",
+      "title": "Política de privacidad",
+      "desc": "Cómo recopilamos, utilizamos y protegemos tus datos personales."
+    },
+    "updated": "Última actualización: [POR COMPLETAR — ej. marzo de 2026]",
+    "sections": [
+      {
+        "title": "1. Responsable del tratamiento",
+        "content": [
+          "El responsable del tratamiento de los datos recopilados en el sitio <strong>domaformalis.com</strong> es:",
+          "<strong>Nombre / Razón social:</strong> [POR COMPLETAR]",
+          "<strong>Dirección:</strong> [POR COMPLETAR]",
+          "<strong>Contacto:</strong> contact@domaformalis.com"
+        ]
+      },
+      {
+        "title": "2. Datos recopilados",
+        "content": [
+          "Solo recopilamos los datos que nos transmites voluntariamente a través del <strong>formulario de contacto</strong>:",
+          "— Apellido y nombre",
+          "— Dirección de correo electrónico",
+          "— Asunto y contenido del mensaje",
+          "No se recopilan datos automáticamente con fines de perfilado o publicidad."
+        ]
+      },
+      {
+        "title": "3. Finalidad del tratamiento",
+        "content": [
+          "Tus datos se utilizan exclusivamente para:",
+          "— Responder a tu solicitud de contacto o presupuesto",
+          "— Proporcionarte información sobre nuestras formaciones",
+          "— Asegurar el seguimiento de tu solicitud",
+          "Tus datos <strong>nunca se venden, alquilan ni ceden</strong> a terceros con fines comerciales."
+        ]
+      },
+      {
+        "title": "4. Base legal del tratamiento",
+        "content": [
+          "El tratamiento de tus datos se basa en tu <strong>consentimiento</strong> (artículo 6.1.a del RGPD), otorgado al enviar el formulario de contacto mediante la casilla correspondiente.",
+          "Puedes retirar tu consentimiento en cualquier momento contactándonos en <strong>contact@domaformalis.com</strong>."
+        ]
+      },
+      {
+        "title": "5. Periodo de conservación",
+        "content": [
+          "Tus datos personales se conservan durante un período máximo de <strong>24 meses</strong> desde tu último contacto con nosotros.",
+          "Transcurrido este plazo, tus datos se eliminan de forma definitiva."
+        ]
+      },
+      {
+        "title": "6. Destinatarios de los datos",
+        "content": [
+          "Tus datos solo son accesibles a los miembros del equipo de Domaformalis encargados de responder a tu solicitud.",
+          "Ningún encargado del tratamiento tiene acceso a tus datos personales, salvo el proveedor de alojamiento del sitio:",
+          "<strong>Vercel Inc.</strong> — 440 N Barranca Ave #4133, Covina, CA 91723, Estados Unidos — <a href=\"https://vercel.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener\">Política de privacidad de Vercel</a>"
+        ]
+      },
+      {
+        "title": "7. Transferencia fuera de la UE",
+        "content": [
+          "El alojamiento del sitio a través de Vercel puede implicar una transferencia de datos a Estados Unidos. Vercel se adhiere a las cláusulas contractuales tipo de la Comisión Europea para regular estas transferencias de conformidad con el RGPD."
+        ]
+      },
+      {
+        "title": "8. Tus derechos",
+        "content": [
+          "De conformidad con el RGPD y la normativa aplicable, dispones de los siguientes derechos:",
+          "<strong>Derecho de acceso:</strong> obtener confirmación de que tus datos están siendo tratados y recibir una copia de ellos.",
+          "<strong>Derecho de rectificación:</strong> corregir datos inexactos o incompletos.",
+          "<strong>Derecho de supresión:</strong> solicitar la eliminación de tus datos.",
+          "<strong>Derecho de oposición:</strong> oponerte al tratamiento de tus datos.",
+          "<strong>Derecho a la portabilidad:</strong> recibir tus datos en un formato estructurado y legible.",
+          "<strong>Derecho a retirar el consentimiento:</strong> retirar tu consentimiento en cualquier momento.",
+          "Para ejercer estos derechos, envía un correo electrónico a: <strong>contact@domaformalis.com</strong>",
+          "Nos comprometemos a responder en un plazo de <strong>30 días</strong>."
+        ]
+      },
+      {
+        "title": "9. Cookies",
+        "content": [
+          "El sitio domaformalis.com utiliza únicamente <strong>cookies técnicas</strong> necesarias para su correcto funcionamiento:",
+          "— Preferencia de idioma (localStorage)",
+          "— Ninguna cookie publicitaria",
+          "— Ninguna herramienta de seguimiento (Google Analytics, Facebook Pixel, etc.)",
+          "No se requiere consentimiento para las cookies estrictamente necesarias para el funcionamiento del sitio."
+        ]
+      },
+      {
+        "title": "10. Seguridad",
+        "content": [
+          "Aplicamos las medidas técnicas y organizativas adecuadas para proteger tus datos contra accesos no autorizados, pérdida o destrucción:",
+          "— Conexión segura HTTPS/TLS",
+          "— Acceso restringido a los datos (solo equipo Domaformalis)",
+          "— Alojamiento seguro (Vercel)"
+        ]
+      },
+      {
+        "title": "11. Reclamación",
+        "content": [
+          "Si consideras que el tratamiento de tus datos no respeta la normativa vigente, puedes presentar una reclamación ante la <strong>CNIL</strong> (autoridad francesa de protección de datos):",
+          "CNIL — 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07",
+          "Sitio web: <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener\">www.cnil.fr</a>"
+        ]
+      }
+    ]
+  },
+  "cgu": {
+    "hero": {
+      "tag": "📋 Condiciones",
+      "title": "Condiciones Generales de Uso",
+      "desc": "Por favor, lea atentamente las siguientes condiciones antes de utilizar nuestro sitio y nuestros servicios."
+    },
+    "updated": "Última actualización: [POR COMPLETAR — ej. marzo de 2026]",
+    "sections": [
+      {
+        "title": "1. Objeto",
+        "content": [
+          "Las presentes Condiciones Generales de Uso (en adelante, « CGU ») tienen por objeto definir las condiciones de acceso y uso del sitio <strong>domaformalis.com</strong>, así como las condiciones de compra de las formaciones ofrecidas.",
+          "Cualquier uso del sitio implica la aceptación plena y total de las presentes CGU."
+        ]
+      },
+      {
+        "title": "2. Editor del sitio",
+        "content": [
+          "<strong>Nombre / Razón social:</strong> [POR COMPLETAR]",
+          "<strong>Dirección:</strong> [POR COMPLETAR]",
+          "<strong>Contacto:</strong> contact@domaformalis.com",
+          "Para más detalles, consulta nuestro <a href='/es/legal'>Aviso legal</a>."
+        ]
+      },
+      {
+        "title": "3. Acceso al sitio",
+        "content": [
+          "El sitio domaformalis.com es accesible gratuitamente para cualquier usuario que disponga de acceso a Internet.",
+          "El editor se esfuerza por mantener el sitio accesible de forma permanente, pero no puede ser considerado responsable de interrupciones relacionadas con mantenimiento, fallos técnicos o acontecimientos ajenos a su voluntad."
+        ]
+      },
+      {
+        "title": "4. Servicios ofrecidos",
+        "content": [
+          "Domaformalis ofrece <strong>formaciones digitales en formato PDF</strong> en los siguientes ámbitos: idiomas (Español, Francés, Búlgaro, Inglés), ofimática (Word, Excel, PowerPoint), multimedia, inteligencia artificial y redes sociales.",
+          "El sitio también ofrece <strong>recursos gratuitos</strong> (fichas de repaso, enlaces útiles, consejos prácticos) accesibles sin compra previa."
+        ]
+      },
+      {
+        "title": "5. Pedido y entrega",
+        "content": [
+          "Las formaciones se solicitan a través del formulario de contacto o por cualquier otro medio indicado en el sitio.",
+          "Tras la confirmación del pedido y la recepción del pago, la formación se envía por correo electrónico <strong>en formato PDF</strong>, generalmente en un plazo de <strong>24 horas</strong> (días laborables).",
+          "El cliente es responsable de proporcionar una dirección de correo electrónico válida. En caso de error en la dirección, podrá realizarse un nuevo envío a solicitud del cliente."
+        ]
+      },
+      {
+        "title": "6. Tarifas y pago",
+        "content": [
+          "Los precios de las formaciones se indican en euros (€) y se comunican previa solicitud a través del formulario de contacto.",
+          "El pago se realiza según las condiciones acordadas durante el intercambio (transferencia bancaria, PayPal u otro medio propuesto).",
+          "[POR COMPLETAR — ej. « IVA no aplicable, artículo 293 B del CGI » si es microempresa]"
+        ]
+      },
+      {
+        "title": "7. Derecho de desistimiento",
+        "content": [
+          "De conformidad con el artículo L.221-28 del Código de Consumo francés, el derecho de desistimiento <strong>no se aplica</strong> a los contenidos digitales suministrados en soporte inmaterial (PDF) cuya ejecución haya comenzado con el acuerdo del consumidor.",
+          "Al aceptar la entrega inmediata de la formación por correo electrónico, el cliente renuncia expresamente a su derecho de desistimiento.",
+          "No obstante, en caso de problema técnico (archivo dañado, error de entrega), nos comprometemos a reenviar la formación lo antes posible."
+        ]
+      },
+      {
+        "title": "8. Propiedad intelectual",
+        "content": [
+          "Todo el contenido del sitio y de las formaciones (textos, imágenes, maquetaciones, logotipos, materiales PDF) está protegido por el derecho de autor.",
+          "La compra de una formación otorga un <strong>derecho de uso personal e intransferible</strong>. Está estrictamente prohibido:",
+          "— Reproducir, copiar o redistribuir las formaciones",
+          "— Compartir los archivos PDF con terceros",
+          "— Utilizar los contenidos con fines comerciales",
+          "— Modificar o adaptar los materiales sin autorización",
+          "Cualquier infracción expone a su autor a acciones legales de conformidad con la normativa de propiedad intelectual."
+        ]
+      },
+      {
+        "title": "9. Responsabilidad",
+        "content": [
+          "Las formaciones se diseñan con fines <strong>informativos y pedagógicos</strong>. El editor no garantiza ningún resultado específico vinculado a su utilización.",
+          "El editor no podrá ser considerado responsable de los daños directos o indirectos derivados del uso del sitio o de las formaciones."
+        ]
+      },
+      {
+        "title": "10. Comportamiento del usuario",
+        "content": [
+          "El usuario se compromete a utilizar el sitio conforme a la ley y a las buenas prácticas. En particular, se abstendrá de:",
+          "— Transmitir contenidos ilícitos a través del formulario de contacto",
+          "— Intentar acceder a partes no autorizadas del sitio",
+          "— Utilizar el sitio con fines de spam o de solicitud comercial no autorizada"
+        ]
+      },
+      {
+        "title": "11. Datos personales",
+        "content": [
+          "La recopilación y el tratamiento de tus datos personales se rigen por nuestra <a href='/es/confidentialite'>Política de privacidad</a>."
+        ]
+      },
+      {
+        "title": "12. Modificación de las CGU",
+        "content": [
+          "El editor se reserva el derecho de modificar las presentes CGU en cualquier momento. Las CGU aplicables son las vigentes en la fecha de uso del sitio.",
+          "Se recomienda consultar esta página regularmente."
+        ]
+      },
+      {
+        "title": "13. Legislación aplicable y litigios",
+        "content": [
+          "Las presentes CGU se rigen por la legislación francesa.",
+          "En caso de litigio, las partes se comprometen a buscar una solución amistosa. En su defecto, solo los tribunales franceses serán competentes."
+        ]
+      }
+    ]
+  },
+  "footer": {
+  "tagline": "La formación fácil para todos y en todas partes.",
+  "navigation": {
+    "title": "Navegación",
+    "home": "Inicio",
+    "formations": "Formaciones",
+    "resources": "Recursos"
+  },
+  "help": {
+    "title": "Ayuda",
+    "contact": "Contacto",
+    "about": "¿Quiénes somos?"
+  },
+  "legal": {
+    "title": "Legal",
+    "legal": "Aviso legal",
+    "privacy": "Privacidad",
+    "cgu": "Condiciones de uso"
+  },
+  "copyright": "Domaformalis.com — Todos los derechos reservados.",
+  "backTop": "Volver arriba ↑"
+},
+
+"Members": {
+  "cta_login": "¿Ya eres miembro? Inicia sesión",
+  "cta_signup": "Regístrate para acceder",
+  "dashboard": {
+    "title": "Mi Espacio de Formación",
+    "welcome": "Encantados de verte de nuevo,",
+    "my_courses": "Mis cursos",
+    "no_courses": "Aún no tienes ninguna formación.",
+    "browse": "Ver el catálogo"
+  },
+  "course_card": {
+    "access": "Acceder al curso",
+    "buy": "Comprar"
+  },
+  "MembresPage": {
+    "title": "Recibir información sobre el lanzamiento",
+    "subtitle": "El área de miembros de Domaformalis estará disponible muy pronto.",
+    "description": "Actualmente estamos preparando los contenidos, las formaciones y los recursos. Déjanos un mensaje a través de la página de contacto para ser informado cuando abramos.",
+    "cta": "Contactarme",
+    "secondaryCta": "Formaciones",
+    "features": [
+      "Formaciones accesibles",
+      "Recursos prácticos",
+      "Área de miembros próximamente"
+    ],
+    "card": {
+      "tag": "Próximamente",
+      "title": "Domaformalis",
+      "description": "Una plataforma diseñada para aprender fácilmente, avanzar a tu ritmo y acceder a contenidos útiles en un solo lugar.",
+      "items": [
+        "Formaciones estructuradas",
+        "Recursos claros",
+        "Acceso para miembros próximamente"
+      ]
+    }
+  }
+}}

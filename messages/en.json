@@ -1,0 +1,865 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "formations": "Courses",
+    "ressources": "Resources",
+    "about": "Who are we?",
+    "contact": "Contact",
+    "members": "Members area"
+  },"seo": {
+  "home": {
+    "title": "Domaformalis | Courses and learning resources",
+    "description": "Discover courses in languages, digital skills and office tools accessible to everyone."
+  },
+  "formations": {
+    "title": "Courses | Domaformalis",
+    "description": "Explore all Domaformalis courses: languages, digital skills, AI and multimedia."
+  },
+  "resources": {
+    "title": "Free resources | Domaformalis",
+    "description": "Useful resources, practical tips and guides to help you progress."
+  },
+  "members": {
+    "title": "Member area | Domaformalis",
+    "description": "Be notified about the launch of the Domaformalis member area."
+  },
+  "about": {
+    "title": "About us | Domaformalis",
+    "description": "Learn more about the mission, values and team behind Domaformalis."
+  },
+  "contact": {
+    "title": "Contact | Domaformalis",
+    "description": "Get in touch with the Domaformalis team."
+  },
+  "legal": {
+    "title": "Legal notice | Domaformalis",
+    "description": "Legal information about the Domaformalis website."
+  },
+  "privacy": {
+    "title": "Privacy policy | Domaformalis",
+    "description": "Information about how we collect and use personal data."
+  },
+  "cgu": {
+    "title": "Terms of use | Domaformalis",
+    "description": "Read the terms and conditions for using the Domaformalis website."
+  }
+},
+  "hero": {
+  "surtitle": "WELCOME TO DOMAFORMALIS.COM",
+  "title": "Easy learning for everyone, everywhere!",
+  "desc": "Courses in languages, office tools and digital skills — accessible, clear and adapted to all levels.",
+  "btn_formations": "View courses",
+  "btn_contact": "Contact us",
+  "levels_desc": "3 levels · Beginner → Advanced",
+  "cards": {
+"spanish": "Spanish",
+ "french": "French",
+"bulgarian": "Bulgarian",
+"levels": "3 levels · Beginner → Advanced"
+    }
+  },
+  "Values": {
+    "tag": "💡 Our values",
+    "title": "What guides us",
+    "list": {
+      "accessibility": {
+        "title": "Accessibility",
+        "desc": "Designed for everyone."
+      },
+      "kindness": {
+        "title": "Kindness",
+        "desc": "A gentle teaching approach."
+      },
+      "openness": {
+        "title": "Openness",
+        "desc": "Curiosity and global culture."
+      }
+    }
+  },
+  "CTA": {
+    "title": "Want to know more?",
+    "desc": "Discover our courses or contact us directly."
+  },
+  "Formations": {
+    "badge": "CATALOG",
+    "title": "Our courses",
+    "subtitle": "Office software, languages, AI and social media — clear materials to help you progress at your own pace.",
+    "tabs": {
+      "languages": "Languages",
+      "it": "IT",
+      "ia": "AI",
+      "social": "Social Media",
+      "multimedia": "Multimedia"
+    },
+    "course_titles": {
+      "english": "English",
+      "bulgarian": "Bulgarian"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "access": "Access →"
+    },
+    "descriptions": {
+      "eng_beg": "Language basics, everyday vocabulary and essential grammar.",
+      "eng_int": "Grammar improvement, listening comprehension and writing skills.",
+      "eng_adv": "Advanced mastery, idioms, nuances and professional communication.",
+      "bg_beg": "Cyrillic alphabet, greetings and basic expressions.",
+      "bg_int": "Conjugation, sentence building and expanded vocabulary.",
+      "bg_adv": "Fluent expression, complex texts and Bulgarian culture."
+    }
+  },
+  "Carousel": {
+    "tag": "✨ FOUNDERS",
+    "title": "Who are we?",
+    "subtitle": "Two complementary profiles, one shared mission: to make learning clearer, more human and more accessible.",
+    "founders": [
+      {
+        "name": "Simon",
+        "role": "Co-founder • IT",
+        "exp": "+8 years",
+        "expLabel": "of experience",
+        "bio": "In 2017, I volunteered to complete a civic service mission as a digital mediator. My mission was to train staff with disabilities in office software tools. There I discovered a true passion for teaching, which I share with you today.",
+        "pills": [
+          "Open to all",
+          "Kind teaching approach",
+          "Clear materials",
+          "100% online"
+        ]
+      },
+      {
+        "name": "Yasmine",
+        "role": "Co-founder • Languages",
+        "exp": "+5 years",
+        "expLabel": "of experience",
+        "bio": "Passionate about languages and intercultural communication, I support learners in mastering French and Spanish. My approach is based on exchange and trust to remove language barriers.",
+        "pills": [
+          "Language expertise",
+          "Human approach",
+          "Adapted content",
+          "Personalised support"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "hero": {
+      "tag": "📩 CONTACT US",
+      "title": "Let's talk about your <span>project</span>",
+      "desc": "A question, a quote request, or simply want to know more? Write to us — we reply quickly!"
+    },
+    "info": {
+      "email_title": "E-mail",
+      "fast_title": "Fast response",
+      "fast_desc": "We usually reply within 24 to 48 hours.",
+      "team_title": "Our team",
+      "simon_role": "IT & digital",
+      "yasmine_role": "Languages & teaching",
+      "social_title": "Follow us"
+    },
+    "form": {
+      "title": "Send us a message",
+      "desc": "Fill out the form below and we will reply within 48 hours.",
+      "lastname": "Last name",
+      "firstname": "First name",
+      "email": "E-mail address",
+      "subject": "Subject",
+      "subject_placeholder": "-- Choose a subject --",
+      "subject_options": {
+        "devis": "Quote request",
+        "info": "Information request",
+        "langues": "Language courses",
+        "it": "IT training",
+        "autre": "Other"
+      },
+      "message": "Message",
+      "message_placeholder": "Describe your request in a few lines...",
+      "rgpd_text": "I agree that my data may be used to process my request.",
+      "privacy_link": "Privacy policy",
+      "submit": "Send message"
+    },
+    "success": {
+      "title": "Message sent!",
+      "desc": "Thank you for your message. We will reply within 48 hours."
+    }
+  },
+  "faq": {
+    "tag": "❓ FAQ",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "How do I receive my course after ordering?",
+        "a": "After your request is confirmed and payment is received, you will receive your course as a PDF directly by e-mail, usually within 24 hours."
+      },
+      {
+        "q": "Are the courses suitable for complete beginners?",
+        "a": "Yes, absolutely! Our courses are designed to be accessible to everyone, even people who have never used a computer or learned a foreign language."
+      },
+      {
+        "q": "Can I buy several courses at the same time?",
+        "a": "Of course! Contact us through this form and specify the courses you want, and we will prepare a grouped quote for you."
+      },
+      {
+        "q": "Is there any follow-up or support after purchase?",
+        "a": "Yes, we remain available by e-mail to answer your questions about the content of the course you bought."
+      },
+      {
+        "q": "Are the courses available in multiple languages?",
+        "a": "For now, the IT materials are in French. The language courses (Spanish, Bulgarian, English) are designed for French-speaking learners."
+      }
+    ]
+  },
+  "res": {
+    "hero": {
+      "tag": "📚 Free resources",
+      "title": "Your online <span>resources</span>",
+      "desc": "Cheat sheets, useful links and practical tips — everything you need to keep progressing between courses."
+    },
+    "fiches": {
+      "tag": "📄 Cheat sheets",
+      "title": "Download our free sheets",
+      "desc": "Clear summaries to keep close at hand for quickly reviewing the essential points."
+    },
+    "liens": {
+      "tag": "🔗 Useful links",
+      "title": "Recommended sites and tools",
+      "desc": "A selection of online resources to complement your learning."
+    },
+    "conseils": {
+      "tag": "💡 Practical tips",
+      "title": "Learn better, learn more",
+      "desc": "A few simple habits to get the most out of your courses."
+    }
+  },
+  "fiche": {
+    "word": {
+      "title": "Word cheat sheet",
+      "desc": "Keyboard shortcuts, styles and Word layout summarised on one page."
+    },
+    "excel": {
+      "title": "Excel cheat sheet",
+      "desc": "Essential formulas, shortcuts and basic Excel functions."
+    },
+    "ppt": {
+      "title": "PowerPoint cheat sheet",
+      "desc": "Best practices for layout and PowerPoint shortcuts."
+    },
+    "es": {
+      "title": "Spanish cheat sheet",
+      "desc": "Irregular verbs, essential conjugations and basic vocabulary."
+    },
+    "fr": {
+      "title": "French cheat sheet",
+      "desc": "Agreement rules, conjugations and common spelling pitfalls."
+    },
+    "secu": {
+      "title": "Security cheat sheet",
+      "desc": "Best practices for browsing safely and protecting your personal data."
+    },
+    "pages": "1 page · PDF",
+    "dl": "⬇ Download"
+  },
+  "liens": {
+    "info": {
+      "title": "IT & Office software"
+    },
+    "langues": {
+      "title": "Languages"
+    },
+    "multimedia": {
+      "title": "Multimedia"
+    },
+    "autres": {
+      "title": "Other resources"
+    },
+    "placeholder": {
+      "name": "Coming soon",
+      "desc": "Description of the site or resource"
+    }
+  },
+  "conseil": {
+    "1": {
+      "title": "Practise regularly",
+      "desc": "15 minutes a day is better than 2 hours at the weekend. Consistency is the key to long-term memorisation."
+    },
+    "2": {
+      "title": "Take notes",
+      "desc": "Write down important points by hand — it reinforces memorisation far more than simple reading."
+    },
+    "3": {
+      "title": "Review with the sheets",
+      "desc": "Keep our cheat sheets close at hand and read them again regularly to anchor the key concepts."
+    }
+  },
+  "page": {
+    "formations": {
+      "tag": "📖 Full catalogue",
+      "title": "All our <span>courses</span>",
+      "desc": "Languages, office software, multimedia, AI — clear, progressive content accessible to all levels."
+    }
+  },
+  "stats": {
+    "formations": {
+      "value": "14+",
+      "label": "courses"
+    },
+    "langues": {
+      "value": "4",
+      "label": "languages taught"
+    },
+    "niveaux": {
+      "value": "3",
+      "label": "Levels / Courses"
+    },
+    "online": {
+      "value": "100%",
+      "label": "online"
+    }
+  },
+  "sec": {
+    "cat": {
+      "tag": "🗂️ Browse by category",
+      "title": "Choose your field",
+      "desc": "Select a category to discover all available courses."
+    }
+  },
+  "tab": {
+    "langues": "🌍 Languages",
+    "informatique": "💻 IT",
+    "multimedia": "🎬 Multimedia",
+    "ia": "🤖 AI",
+    "reseaux": "📱 Social Media"
+  },
+  "lang": {
+    "es": {
+      "name": "Spanish",
+      "debutant": {
+        "title": "Spanish A1-A2",
+        "desc": "Spanish basics, essential verbs and first conversations."
+      },
+      "intermediaire": {
+        "title": "Spanish B1-B2",
+        "desc": "Key tense conjugation, reading and everyday expression."
+      },
+      "avance": {
+        "title": "Spanish C1-C2",
+        "desc": "Grammatical subtleties, the subjunctive and professional Spanish."
+      }
+    },
+    "fr": {
+      "name": "French",
+      "debutant": {
+        "title": "French A1-A2",
+        "desc": "Phonetics, basic grammar and core vocabulary."
+      },
+      "intermediaire": {
+        "title": "French B1-B2",
+        "desc": "Spelling, written expression and everyday spoken French."
+      },
+      "avance": {
+        "title": "French C1-C2",
+        "desc": "Advanced writing, literature and professional communication."
+      }
+    },
+    "bg": {
+      "name": "Bulgarian",
+      "debutant": {
+        "title": "Bulgarian A1-A2",
+        "desc": "Cyrillic alphabet, greetings and basic expressions."
+      },
+      "intermediaire": {
+        "title": "Bulgarian B1-B2",
+        "desc": "Conjugation, sentence building and expanded vocabulary."
+      },
+      "avance": {
+        "title": "Bulgarian C1-C2",
+        "desc": "Fluent expression, complex texts and Bulgarian culture."
+      }
+    },
+    "en": {
+      "name": "English",
+      "debutant": {
+        "title": "English A1-A2",
+        "desc": "Language basics, everyday vocabulary and essential grammar."
+      },
+      "intermediaire": {
+        "title": "English B1-B2",
+        "desc": "Grammar improvement, listening comprehension and writing skills."
+      },
+      "avance": {
+        "title": "English C1-C2",
+        "desc": "Advanced mastery, idioms, nuances and professional communication."
+      }
+    }
+  },
+  "niveau": {
+    "debutant": "Beginner"
+  },
+  "btn": {
+    "access": "Access →"
+  },
+  "form": {
+    "word": {
+      "title": "Word course",
+      "pages": "57 pages"
+    },
+    "hours": "~10 hours",
+    "level": {
+      "beginner": "Beginner",
+      "beginner_inter": "Beginner / Intermediate"
+    },
+    "btn": "Access →"
+  },
+  "multimedia": {
+    "video": {
+      "title": "Video editing",
+      "tools": "DaVinci Resolve / Premiere Pro"
+    }
+  },
+  "ia": {
+    "title": "AI courses — Coming soon",
+    "desc": "Understand and use artificial intelligence in everyday life, ChatGPT, automation and much more.",
+    "btn": "Notify me when it launches"
+  },
+  "reseaux": {
+    "title": "Social Media courses — Coming soon",
+    "desc": "Facebook, Instagram, LinkedIn... Learn to use social media confidently and effectively.",
+    "btn": "Notify me when it launches"
+  },
+  "cta": {
+    "title": "Ready to go further?",
+    "desc": "Discover all our courses or contact us for personalised support.",
+    "btn1": "📚 View courses",
+    "btn2": "Contact us"
+  },
+  "qsn": {
+    "hero": {
+      "tag": "👋 Our team",
+      "title": "Who <span>are we</span>?",
+      "desc": "Two people passionate about teaching and knowledge sharing, united to make learning accessible to everyone."
+    },
+    "mission": {
+      "title": "Our mission",
+      "p1": "At <strong>Domaformalis</strong>, we believe that <strong>everyone deserves to learn</strong>, whatever their starting level, age or situation.",
+      "p2": "Simon and Yasmine form a complementary team: <strong>IT & digital</strong> on one side, <strong>languages & culture</strong> on the other."
+    },
+    "equipe": {
+      "tag": "👥 The team",
+      "title": "Simon & Yasmine"
+    },
+    "simon": {
+      "role": "Co-founder · IT",
+      "p1": "In 2017, aged 24, Simon completed an 8-month Civic Service mission as a digital mediator in an ESAT. There he trained staff with disabilities to use computer tools and discovered a true passion for teaching.",
+      "p2": "Since then, he has put that passion at the service of everyone by creating clear, illustrated training courses that are accessible even to complete beginners.",
+      "tags": [
+        "💻 Office software",
+        "🤖 Artificial Intelligence",
+        "📱 Social Media",
+        "🎬 Multimedia"
+      ]
+    },
+    "yasmine": {
+      "role": "Co-founder · Languages",
+      "p1": "Passionate about languages and cultures, Yasmine is Domaformalis' language lead. She designs learning materials for language study, adapted to all levels.",
+      "p2": "Her kind teaching approach and deep knowledge of each language make her the cornerstone of the project's language courses.",
+      "tags": [
+        {
+          "label": "🇪🇸 Spanish",
+          "lang": true
+        },
+        {
+          "label": "🇫🇷 French",
+          "lang": true
+        },
+        {
+          "label": "🇧🇬 Bulgarian",
+          "lang": true
+        },
+        {
+          "label": "🎓 3 levels per language",
+          "lang": false
+        }
+      ]
+    },
+    "valeurs": {
+      "tag": "💡 Our values",
+      "title": "What guides us",
+      "items": [
+        {
+          "icon": "🤝",
+          "title": "Accessibility",
+          "desc": "Our courses are designed to be understood by everyone, with no special prerequisites."
+        },
+        {
+          "icon": "❤️",
+          "title": "Kindness",
+          "desc": "We believe in a gentle and encouraging teaching approach. Everyone progresses at their own pace, without judgement."
+        },
+        {
+          "icon": "🌍",
+          "title": "Openness",
+          "desc": "IT, languages, culture... We cultivate curiosity and openness to the world."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want to know more?",
+      "desc": "Discover our courses or contact us directly — we reply quickly!",
+      "btn1": "📚 View courses",
+      "btn2": "✉️ Contact us"
+    }
+  },
+  "legal": {
+    "hero": {
+      "tag": "📜 Legal information",
+      "title": "Legal notice",
+      "desc": "In accordance with French Law no. 2004-575 of 21 June 2004 on confidence in the digital economy."
+    },
+    "updated": "Last updated: [TO BE COMPLETED — e.g. March 2026]",
+    "sections": [
+      {
+        "title": "1. Website publisher",
+        "content": [
+          "The website <strong>domaformalis.com</strong> is published by:",
+          "<strong>Name / Business name:</strong> [TO BE COMPLETED]",
+          "<strong>Legal status:</strong> [TO BE COMPLETED — e.g. Sole proprietorship, LLC, SAS…]",
+          "<strong>Registered office:</strong> [TO BE COMPLETED — full address]",
+          "<strong>SIRET:</strong> [TO BE COMPLETED]",
+          "<strong>EU VAT number:</strong> [TO BE COMPLETED or “Not subject to VAT”]",
+          "<strong>Publishing director:</strong> Simon [TO BE COMPLETED — last name]",
+          "<strong>Contact:</strong> contact@domaformalis.com"
+        ]
+      },
+      {
+        "title": "2. Hosting provider",
+        "content": [
+          "The website is hosted by:",
+          "<strong>Vercel Inc.</strong>",
+          "440 N Barranca Ave #4133, Covina, CA 91723, United States",
+          "Website: <a href=\"https://vercel.com\" target=\"_blank\" rel=\"noopener\">vercel.com</a>"
+        ]
+      },
+      {
+        "title": "3. Intellectual property",
+        "content": [
+          "All content on the website domaformalis.com (texts, images, logos, courses, layouts, graphics) is protected by copyright and intellectual property law.",
+          "Any reproduction, representation, modification or exploitation, in whole or in part, of this content, by any means whatsoever, without the publisher’s prior written permission, is strictly prohibited and constitutes infringement."
+        ]
+      },
+      {
+        "title": "4. Personal data",
+        "content": [
+          "Information collected via the contact form (last name, first name, e-mail, message) is used only to respond to your request. It is neither sold nor transferred to third parties.",
+          "In accordance with the General Data Protection Regulation (GDPR) and the amended French Data Protection Act of 6 January 1978, you have the right to access, rectify, delete and object regarding your personal data.",
+          "To exercise these rights, contact us at: <strong>contact@domaformalis.com</strong>"
+        ]
+      },
+      {
+        "title": "5. Cookies",
+        "content": [
+          "The website domaformalis.com may use technical cookies necessary for the proper functioning of the site (language preference, session).",
+          "No advertising or tracking cookies are used. No data is transmitted to advertising networks."
+        ]
+      },
+      {
+        "title": "6. Liability",
+        "content": [
+          "The publisher strives to provide information that is as accurate as possible. However, it cannot be held liable for omissions, inaccuracies or errors contained on the website.",
+          "The publisher cannot be held liable for how the information and content on the website are used. The user is solely responsible for their use."
+        ]
+      },
+      {
+        "title": "7. Hyperlinks",
+        "content": [
+          "The website may contain links to other websites. The publisher exercises no control over these sites and disclaims all responsibility for their content."
+        ]
+      },
+      {
+        "title": "8. Applicable law",
+        "content": [
+          "This legal notice is governed by French law. In the event of a dispute, only the French courts shall have jurisdiction."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "hero": {
+      "tag": "🔒 Privacy",
+      "title": "Privacy Policy",
+      "desc": "How we collect, use and protect your personal data."
+    },
+    "updated": "Last updated: [TO BE COMPLETED — e.g. March 2026]",
+    "sections": [
+      {
+        "title": "1. Data controller",
+        "content": [
+          "The data controller for the data collected on the website <strong>domaformalis.com</strong> is:",
+          "<strong>Name / Business name:</strong> [TO BE COMPLETED]",
+          "<strong>Address:</strong> [TO BE COMPLETED]",
+          "<strong>Contact:</strong> contact@domaformalis.com"
+        ]
+      },
+      {
+        "title": "2. Data collected",
+        "content": [
+          "We collect only the data that you voluntarily provide via the <strong>contact form</strong>:",
+          "— Last name and first name",
+          "— E-mail address",
+          "— Subject and message content",
+          "No data is collected automatically for profiling or advertising purposes."
+        ]
+      },
+      {
+        "title": "3. Purpose of processing",
+        "content": [
+          "Your data is used exclusively to:",
+          "— Respond to your contact or quote request",
+          "— Provide you with information about our courses",
+          "— Follow up on your request",
+          "Your data is <strong>never sold, rented or transferred</strong> to third parties for commercial purposes."
+        ]
+      },
+      {
+        "title": "4. Legal basis for processing",
+        "content": [
+          "The processing of your data is based on your <strong>consent</strong> (Article 6.1.a GDPR), given when sending the contact form via the dedicated checkbox.",
+          "You may withdraw your consent at any time by contacting us at <strong>contact@domaformalis.com</strong>."
+        ]
+      },
+      {
+        "title": "5. Retention period",
+        "content": [
+          "Your personal data is kept for a maximum period of <strong>24 months</strong> from your last contact with us.",
+          "Beyond this period, your data is permanently deleted."
+        ]
+      },
+      {
+        "title": "6. Recipients of the data",
+        "content": [
+          "Your data is accessible only to members of the Domaformalis team responsible for answering your request.",
+          "No processor has access to your personal data, except the website host:",
+          "<strong>Vercel Inc.</strong> — 440 N Barranca Ave #4133, Covina, CA 91723, United States — <a href=\"https://vercel.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener\">Vercel Privacy Policy</a>"
+        ]
+      },
+      {
+        "title": "7. Transfer outside the EU",
+        "content": [
+          "Hosting the website via Vercel may involve a transfer of data to the United States. Vercel adheres to the European Commission’s standard contractual clauses to govern these transfers in accordance with the GDPR."
+        ]
+      },
+      {
+        "title": "8. Your rights",
+        "content": [
+          "In accordance with the GDPR and the French Data Protection Act, you have the following rights:",
+          "<strong>Right of access:</strong> obtain confirmation that your data is being processed and receive a copy of it.",
+          "<strong>Right to rectification:</strong> have inaccurate or incomplete data corrected.",
+          "<strong>Right to erasure:</strong> request the deletion of your data.",
+          "<strong>Right to object:</strong> object to the processing of your data.",
+          "<strong>Right to portability:</strong> receive your data in a structured and readable format.",
+          "<strong>Right to withdraw consent:</strong> withdraw your consent at any time.",
+          "To exercise these rights, send an e-mail to: <strong>contact@domaformalis.com</strong>",
+          "We undertake to respond within <strong>30 days</strong>."
+        ]
+      },
+      {
+        "title": "9. Cookies",
+        "content": [
+          "The website domaformalis.com uses only <strong>technical cookies</strong> necessary for proper functioning:",
+          "— Language preference (localStorage)",
+          "— No advertising cookies",
+          "— No tracking tools (Google Analytics, Facebook Pixel, etc.)",
+          "No consent is required for cookies that are strictly necessary for the functioning of the website (Article 82 of the French Data Protection Act)."
+        ]
+      },
+      {
+        "title": "10. Security",
+        "content": [
+          "We implement appropriate technical and organisational measures to protect your data against unauthorised access, loss or destruction:",
+          "— Secure HTTPS/TLS connection",
+          "— Restricted access to data (Domaformalis team only)",
+          "— Secure hosting (Vercel)"
+        ]
+      },
+      {
+        "title": "11. Complaint",
+        "content": [
+          "If you believe that the processing of your data does not comply with the applicable regulations, you may lodge a complaint with the <strong>CNIL</strong> (French Data Protection Authority):",
+          "CNIL — 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07",
+          "Website: <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener\">www.cnil.fr</a>"
+        ]
+      }
+    ]
+  },
+  "cgu": {
+    "hero": {
+      "tag": "📋 Terms",
+      "title": "General Terms of Use",
+      "desc": "Please read the following terms carefully before using our website and services."
+    },
+    "updated": "Last updated: [TO BE COMPLETED — e.g. March 2026]",
+    "sections": [
+      {
+        "title": "1. Purpose",
+        "content": [
+          "These General Terms of Use (hereinafter “Terms of Use”) are intended to define the terms of access to and use of the website <strong>domaformalis.com</strong>, as well as the conditions for purchasing the courses offered.",
+          "Any use of the website implies full and unconditional acceptance of these Terms of Use."
+        ]
+      },
+      {
+        "title": "2. Website publisher",
+        "content": [
+          "<strong>Name / Business name:</strong> [TO BE COMPLETED]",
+          "<strong>Address:</strong> [TO BE COMPLETED]",
+          "<strong>Contact:</strong> contact@domaformalis.com",
+          "For more details, see our <a href='/en/legal'>Legal notice</a>."
+        ]
+      },
+      {
+        "title": "3. Access to the website",
+        "content": [
+          "The website domaformalis.com is accessible free of charge to any user with Internet access.",
+          "The publisher endeavours to keep the website accessible at all times, but cannot be held responsible for interruptions related to maintenance, technical failures or events beyond its control."
+        ]
+      },
+      {
+        "title": "4. Services offered",
+        "content": [
+          "Domaformalis offers <strong>digital courses in PDF format</strong> in the following areas: languages (Spanish, French, Bulgarian, English), office software (Word, Excel, PowerPoint), multimedia, artificial intelligence and social media.",
+          "The website also offers <strong>free resources</strong> (cheat sheets, useful links, practical tips) accessible without prior purchase."
+        ]
+      },
+      {
+        "title": "5. Order and delivery",
+        "content": [
+          "Courses are ordered via the contact form or any other means indicated on the website.",
+          "After confirmation of the order and receipt of payment, the course is sent by e-mail <strong>in PDF format</strong>, generally within <strong>24 hours</strong> (working days).",
+          "The customer is responsible for providing a valid e-mail address. In the event of an incorrect address, a new delivery may be made upon request."
+        ]
+      },
+      {
+        "title": "6. Prices and payment",
+        "content": [
+          "Course prices are indicated in euros (€) and are communicated on request via the contact form.",
+          "Payment is made according to the arrangements agreed during the exchange (bank transfer, PayPal, or any other proposed method).",
+          "[TO BE COMPLETED — e.g. “VAT not applicable, Article 293 B of the French Tax Code” if sole trader]"
+        ]
+      },
+      {
+        "title": "7. Right of withdrawal",
+        "content": [
+          "In accordance with Article L.221-28 of the French Consumer Code, the right of withdrawal <strong>does not apply</strong> to digital content supplied on an intangible medium (PDF) whose performance has begun with the consumer’s consent.",
+          "By accepting the immediate delivery of the course by e-mail, the customer expressly waives their right of withdrawal.",
+          "However, in the event of a technical issue (corrupted file, delivery error), we undertake to resend the course as quickly as possible."
+        ]
+      },
+      {
+        "title": "8. Intellectual property",
+        "content": [
+          "All website and course content (texts, images, layouts, logos, PDF materials) is protected by copyright.",
+          "The purchase of a course grants a <strong>personal, non-transferable right of use</strong>. It is strictly forbidden to:",
+          "— Reproduce, copy or redistribute the courses",
+          "— Share PDF files with third parties",
+          "— Use the content for commercial purposes",
+          "— Modify or adapt the materials without authorisation",
+          "Any violation exposes its author to legal action in accordance with intellectual property law."
+        ]
+      },
+      {
+        "title": "9. Liability",
+        "content": [
+          "The courses are designed for <strong>informational and educational</strong> purposes. The publisher does not guarantee any specific result linked to their use.",
+          "The publisher cannot be held liable for direct or indirect damage resulting from the use of the website or the courses."
+        ]
+      },
+      {
+        "title": "10. User behaviour",
+        "content": [
+          "The user undertakes to use the website in accordance with the law and good practice. In particular, the user must not:",
+          "— Transmit unlawful content via the contact form",
+          "— Attempt to access unauthorised parts of the website",
+          "— Use the website for spam or unauthorised commercial solicitation"
+        ]
+      },
+      {
+        "title": "11. Personal data",
+        "content": [
+          "The collection and processing of your personal data are governed by our <a href='/en/confidentialite'>Privacy Policy</a>."
+        ]
+      },
+      {
+        "title": "12. Changes to the Terms of Use",
+        "content": [
+          "The publisher reserves the right to modify these Terms of Use at any time. The applicable Terms of Use are those in force on the date you use the website.",
+          "It is advisable to consult this page regularly."
+        ]
+      },
+      {
+        "title": "13. Applicable law and disputes",
+        "content": [
+          "These Terms of Use are governed by French law.",
+          "In the event of a dispute, the parties undertake to seek an amicable solution. Failing that, only the French courts shall have jurisdiction."
+        ]
+      }
+    ]
+  },
+  "footer": {
+  "tagline": "Easy learning for everyone, everywhere.",
+  "navigation": {
+    "title": "Navigation",
+    "home": "Home",
+    "formations": "Courses",
+    "resources": "Resources"
+  },
+  "help": {
+    "title": "Help",
+    "contact": "Contact",
+    "about": "Who are we?"
+  },
+  "legal": {
+    "title": "Legal",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "cgu": "Terms of Use"
+  },
+  "copyright": "Domaformalis.com — All rights reserved.",
+  "backTop": "Back to top ↑"
+},
+
+"Members": {
+  "cta_login": "Already a member? Log in",
+  "cta_signup": "Sign up for access",
+  "dashboard": {
+    "title": "My Learning Space",
+    "welcome": "Glad to see you again,",
+    "my_courses": "My courses",
+    "no_courses": "You don't have any courses yet.",
+    "browse": "Browse the catalog"
+  },
+  "course_card": {
+    "access": "Access course",
+    "buy": "Buy"
+  },
+  "MembresPage": {
+    "title": "Be notified about the launch",
+    "subtitle": "Domaformalis member area will be available soon.",
+    "description": "We are currently preparing the content, training courses and resources. Leave us a message via the contact page to be informed as soon as we launch.",
+    "cta": "Contact me",
+    "secondaryCta": "Courses",
+    "features": [
+      "Accessible courses",
+      "Practical resources",
+      "Member area coming soon"
+    ],
+    "card": {
+      "tag": "Coming soon",
+      "title": "Domaformalis",
+      "description": "A platform designed to help you learn easily, progress at your own pace and access useful content all in one place.",
+      "items": [
+        "Structured courses",
+        "Clear resources",
+        "Member access coming soon"
+      ]
+    }
+  }
+}}
