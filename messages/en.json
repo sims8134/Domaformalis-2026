@@ -848,7 +848,7 @@
   "placeholder": "Your email address",
   "button": "Subscribe",
   "sending": "Sending...",
-  "success": "Check your inbox to confirm your subscription.",
+  "success": "Check your inbox to confirm your subscription. Please also check your spam folder.",
   "already": "This email is already subscribed.",
   "emailInvalid": "Please enter a valid email address.",
   "error": "Something went wrong. Please try again."

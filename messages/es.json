@@ -875,7 +875,7 @@
   "placeholder": "Tu correo electrónico",
   "button": "Suscribirse",
   "sending": "Enviando...",
-  "success": "Revisa tu bandeja de entrada para confirmar tu suscripción.",
+  "success": "Revisa tu bandeja de entrada para confirmar tu suscripción. Revisa también tu carpeta de spam.",
   "already": "Este correo ya está suscrito.",
   "emailInvalid": "Por favor, introduce un correo electrónico válido.",
   "error": "Ha ocurrido un error. Por favor, inténtalo de nuevo."

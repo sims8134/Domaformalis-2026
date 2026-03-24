@@ -822,7 +822,7 @@
   "placeholder": "Votre adresse e-mail",
   "button": "S'inscrire",
   "sending": "Envoi...",
-  "success": "Vérifiez votre boîte mail pour confirmer votre inscription.",
+  "success": "Vérifiez votre boîte mail pour confirmer votre inscription. Pensez à vérifier vos spams.",
   "already": "Cette adresse est déjà inscrite.",
   "emailInvalid": "Veuillez entrer une adresse e-mail valide.",
   "error": "Une erreur est survenue. Veuillez réessayer."
