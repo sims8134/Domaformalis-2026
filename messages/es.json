@@ -210,7 +210,11 @@
     "success": {
       "title": "¡Mensaje enviado!",
       "desc": "Gracias por tu mensaje. Te responderemos dentro de las próximas 48 horas."
-    }
+    },
+    "sending": "Enviando...",
+    "error_missing": "Por favor, rellena todos los campos.",
+    "error_rgpd": "Por favor, acepta la política de privacidad.",
+    "error_server": "Ha ocurrido un error. Por favor, inténtalo de nuevo."
   },
   "faq": {
     "tag": "❓ FAQ",
@@ -853,7 +857,29 @@
   "copyright": "Domaformalis.com — Todos los derechos reservados.",
   "backTop": "Volver arriba ↑"
 },
-
+"newsletterConfirmed": {
+  "thankYou": "¡Gracias!",
+  "title": "Suscripción confirmada",
+  "description": "Tu correo ha sido confirmado. Recibirás nuestras próximas publicaciones.",
+  "backHome": "Volver al inicio"
+},
+"newsletterUnsubscribed": {
+  "title": "Desuscrito",
+  "description": "Has sido eliminado de nuestra lista. Ya no recibirás correos de nuestra parte.",
+  "backHome": "Volver al inicio"
+},
+"newsletter": {
+"heading": "MANTENTE <span style=\"color:#0cc0df\">INFORMADO</span>. MANTENTE <span style=\"color:#0cc0df\">FORMADO</span>.",
+  "title": "Boletín",
+  "description": "Recibe los nuevos cursos y recursos. Sin spam.",
+  "placeholder": "Tu correo electrónico",
+  "button": "Suscribirse",
+  "sending": "Enviando...",
+  "success": "Revisa tu bandeja de entrada para confirmar tu suscripción.",
+  "already": "Este correo ya está suscrito.",
+  "emailInvalid": "Por favor, introduce un correo electrónico válido.",
+  "error": "Ha ocurrido un error. Por favor, inténtalo de nuevo."
+},
 "Members": {
   "cta_login": "¿Ya eres miembro? Inicia sesión",
   "cta_signup": "Regístrate para acceder",

@@ -10,6 +10,17 @@ export default function ContactPage() {
   const [dict, setDict] = useState<any>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [formSent, setFormSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+
+  // Form fields
+  const [lastname, setLastname] = useState("");
+  const [firstname, setFirstname] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [rgpd, setRgpd] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
 
   useEffect(() => {
     async function load() {
@@ -21,15 +32,51 @@ export default function ContactPage() {
 
   if (!dict) return null;
 
-  // ─── Raccourcis ────────────────────────────────────────────
-  // Désormais dict.contact et dict.faq sont au TOP-LEVEL du JSON
-  // Plus de chaînage optionnel nécessaire : on sait qu'ils existent.
   const c = dict.contact;
   const f = dict.faq;
 
-  function handleSubmit() {
-    // TODO: intégrer EmailJS / API
-    setFormSent(true);
+  async function handleSubmit() {
+    setError("");
+
+    if (!lastname || !firstname || !email || !subject || !message) {
+      setError(c.form.error_missing || "Veuillez remplir tous les champs.");
+      return;
+    }
+
+    if (!rgpd) {
+      setError(c.form.error_rgpd || "Veuillez accepter la politique de confidentialité.");
+      return;
+    }
+
+    setSending(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          lastname,
+          firstname,
+          email,
+          subject,
+          message,
+          rgpd,
+          honeypot,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.ok) {
+        setFormSent(true);
+      } else {
+        setError(c.form.error_server || "Une erreur est survenue. Veuillez réessayer.");
+      }
+    } catch {
+      setError(c.form.error_server || "Une erreur est survenue. Veuillez réessayer.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -37,9 +84,7 @@ export default function ContactPage() {
       {/* --- PAGE HERO --- */}
       <section className="page-hero">
         <div className="page-hero-inner">
-          <span className="hero-tag">
-            {c.hero.tag}
-          </span>
+          <span className="hero-tag">{c.hero.tag}</span>
           <h1 dangerouslySetInnerHTML={{ __html: c.hero.title }} />
           <p>{c.hero.desc}</p>
         </div>
@@ -49,11 +94,8 @@ export default function ContactPage() {
       <section className="contact-section">
         <div className="container">
           <div className="contact-grid">
-
             {/* COLONNE INFO (GAUCHE) */}
             <div className="contact-info">
-
-              {/* Email */}
               <div className="info-card">
                 <div className="info-card-header">
                   <div className="info-icon">📧</div>
@@ -66,7 +108,6 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              {/* Réponse rapide */}
               <div className="info-card">
                 <div className="info-card-header">
                   <div className="info-icon">⚡</div>
@@ -75,7 +116,6 @@ export default function ContactPage() {
                 <p>{c.info.fast_desc}</p>
               </div>
 
-              {/* Équipe */}
               <div className="info-card">
                 <div className="info-card-header">
                   <div className="info-icon">👥</div>
@@ -107,7 +147,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Réseaux sociaux */}
               <div className="info-card">
                 <div className="info-card-header">
                   <div className="info-icon">📲</div>
@@ -131,22 +170,40 @@ export default function ContactPage() {
                   <div className="form-row">
                     <div className="form-group">
                       <label>{c.form.lastname}</label>
-                      <input type="text" placeholder="Dupont" />
+                      <input
+                        type="text"
+                        placeholder="Dupont"
+                        value={lastname}
+                        onChange={(e) => setLastname(e.target.value)}
+                      />
                     </div>
                     <div className="form-group">
                       <label>{c.form.firstname}</label>
-                      <input type="text" placeholder="Marie" />
+                      <input
+                        type="text"
+                        placeholder="Marie"
+                        value={firstname}
+                        onChange={(e) => setFirstname(e.target.value)}
+                      />
                     </div>
                   </div>
 
                   <div className="form-group">
                     <label>{c.form.email}</label>
-                    <input type="email" placeholder="marie@example.com" />
+                    <input
+                      type="email"
+                      placeholder="marie@example.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
                   </div>
 
                   <div className="form-group">
                     <label>{c.form.subject}</label>
-                    <select>
+                    <select
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
+                    >
                       <option value="">{c.form.subject_placeholder}</option>
                       {Object.entries(c.form.subject_options).map(
                         ([key, label]) => (
@@ -163,26 +220,54 @@ export default function ContactPage() {
                     <textarea
                       rows={5}
                       placeholder={c.form.message_placeholder}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                     />
                   </div>
 
+                  {/* Honeypot — hidden from real users */}
+                  <input
+                    type="text"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    style={{ position: "absolute", left: "-9999px", opacity: 0 }}
+                  />
+
                   <div className="form-check">
-                    <input type="checkbox" id="rgpd" />
+                    <input
+                      type="checkbox"
+                      id="rgpd"
+                      checked={rgpd}
+                      onChange={(e) => setRgpd(e.target.checked)}
+                    />
                     <label htmlFor="rgpd">
                       {c.form.rgpd_text}{" "}
-                      <a href="#" className="blue-link">
+                      <a href={`/${lang}/confidentialite`} className="blue-link">
                         {c.form.privacy_link}
                       </a>
                       .
                     </label>
                   </div>
 
+                  {error && (
+                    <p style={{ color: "#e53e3e", fontSize: "14px", marginTop: "8px" }}>
+                      {error}
+                    </p>
+                  )}
+
                   <button
                     type="button"
                     className="btn-submit"
                     onClick={handleSubmit}
+                    disabled={sending}
+                    style={{ opacity: sending ? 0.6 : 1 }}
                   >
-                    ✉️ {c.form.submit}
+                    {sending
+                      ? (c.form.sending || "Envoi en cours...")
+                      : `✉️ ${c.form.submit}`}
                   </button>
                 </div>
               ) : (

@@ -190,7 +190,11 @@
     "success": {
       "title": "Message envoyé !",
       "desc": "Merci pour votre message. Nous vous répondrons dans les 48 heures."
-    }
+    },
+    "sending": "Envoi en cours...",
+    "error_missing": "Veuillez remplir tous les champs.",
+    "error_rgpd": "Veuillez accepter la politique de confidentialité.",
+    "error_server": "Une erreur est survenue. Veuillez réessayer."
   },
 
   "faq": {
@@ -778,8 +782,7 @@
         ]
       }
     ]
-  },
-  "footer": {
+  },"footer": {
   "tagline": "La formation facile pour tous et partout.",
   "navigation": {
     "title": "Navigation",
@@ -800,6 +803,29 @@
   },
   "copyright": "Domaformalis.com — Tous droits réservés.",
   "backTop": "Retour en haut ↑"
+},
+"newsletterConfirmed": {
+  "thankYou": "Merci !",
+  "title": "Inscription confirmée",
+  "description": "Votre adresse a été confirmée. Vous recevrez nos prochaines publications.",
+  "backHome": "Retour à l'accueil"
+},
+"newsletterUnsubscribed": {
+  "title": "Désinscription",
+  "description": "Vous avez été retiré de notre liste. Vous ne recevrez plus d'e-mails de notre part.",
+  "backHome": "Retour à l'accueil"
+},
+"newsletter": {
+  "heading": "RESTEZ <span style=\"color:#0cc0df\">INFORMÉ</span>. RESTEZ <span style=\"color:#0cc0df\">FORMÉ</span>.",
+  "title": "Newsletter",
+  "description": "Recevez nos nouveaux cours et ressources. Pas de spam.",
+  "placeholder": "Votre adresse e-mail",
+  "button": "S'inscrire",
+  "sending": "Envoi...",
+  "success": "Vérifiez votre boîte mail pour confirmer votre inscription.",
+  "already": "Cette adresse est déjà inscrite.",
+  "emailInvalid": "Veuillez entrer une adresse e-mail valide.",
+  "error": "Une erreur est survenue. Veuillez réessayer."
 },
    "Members": {
     "cta_login": "Déjà membre ? Connectez-vous",
