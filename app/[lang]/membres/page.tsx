@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getDictionary } from "@/app/lib/get-dictionary";
 
-const BASE_URL = "https://www.domaformalis.com";
+// FIX : Cohérence (pas de www)
+const BASE_URL = "https://domaformalis.com";
 
 type PageProps = {
   params: Promise<{
@@ -17,12 +18,12 @@ export async function generateMetadata({
   const dict = await getDictionary(lang);
   const page = dict?.Members?.MembresPage;
 
+  const title = page?.seo?.title || page?.title || "Espace Membres | Domaformalis";
+  const description = page?.seo?.description || page?.description || "Inscrivez-vous pour être informé du lancement de l'espace membres Domaformalis.";
+
   return {
-    title: page?.seo?.title || page?.title || "Member area | Domaformalis",
-    description:
-      page?.seo?.description ||
-      page?.description ||
-      "Be notified about the launch of the Domaformalis member area.",
+    title,
+    description,
     alternates: {
       canonical: `${BASE_URL}/${lang}/membres`,
       languages: {
@@ -32,6 +33,15 @@ export async function generateMetadata({
         bg: `${BASE_URL}/bg/membres`,
         "x-default": `${BASE_URL}/fr/membres`,
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${lang}/membres`,
+      siteName: "Domaformalis",
+      images: [{ url: "/og-image.png" }],
+      locale: lang === "fr" ? "fr_FR" : lang === "en" ? "en_US" : lang,
+      type: "website",
     },
   };
 }

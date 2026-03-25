@@ -5,7 +5,8 @@ import RessourcesLinks from "@/components/RessourcesLinks";
 import RessourcesTips from "@/components/RessourcesTips";
 import Link from "next/link";
 
-const BASE_URL = "https://www.domaformalis.com";
+// FIX : Cohérence avec le layout (pas de www)
+const BASE_URL = "https://domaformalis.com";
 
 export async function generateMetadata({
   params,
@@ -15,12 +16,8 @@ export async function generateMetadata({
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
-  const title =
-    dict?.seo?.resources?.title || "Domaformalis | Resources";
-
-  const description =
-    dict?.seo?.resources?.description ||
-    "Free resources, practical tips and useful links.";
+  const title = dict?.seo?.resources?.title || "Ressources Gratuites & Fiches Pratiques | Domaformalis";
+  const description = dict?.seo?.resources?.description || "Accédez à nos ressources gratuites : fiches de rappel, liens utiles et conseils pratiques pour progresser en informatique, langues et IA.";
 
   return {
     title,
@@ -34,6 +31,15 @@ export async function generateMetadata({
         bg: `${BASE_URL}/bg/ressources`,
         "x-default": `${BASE_URL}/fr/ressources`,
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${lang}/ressources`,
+      siteName: "Domaformalis",
+      images: [{ url: "/og-image.png" }],
+      locale: lang === "fr" ? "fr_FR" : lang === "en" ? "en_US" : lang,
+      type: "website",
     },
   };
 }

@@ -6,7 +6,8 @@ import ValuesSection from "../../components/ValuesSection";
 import Hero from "../../components/Hero";
 import Link from "next/link";
 
-const BASE_URL = "https://www.domaformalis.com";
+// FIX : On retire le 'www' pour être raccord avec le layout.tsx
+const BASE_URL = "https://domaformalis.com";
 
 export async function generateMetadata({
   params,
@@ -16,17 +17,14 @@ export async function generateMetadata({
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
-  const title =
-    dict?.seo?.home?.title || "Domaformalis | Multilingual learning platform";
-
-  const description =
-    dict?.seo?.home?.description ||
-    "Courses and resources available in several languages.";
+  const title = dict?.seo?.home?.title || "Domaformalis | Plateforme de Formation Multilingue";
+  const description = dict?.seo?.home?.description || "Cours et ressources disponibles en plusieurs langues : Informatique, IA, Langues et plus.";
 
   return {
     title,
     description,
     alternates: {
+      // On s'assure que l'URL canonique est propre (sans www)
       canonical: `${BASE_URL}/${lang}`,
       languages: {
         fr: `${BASE_URL}/fr`,
@@ -35,6 +33,15 @@ export async function generateMetadata({
         bg: `${BASE_URL}/bg`,
         "x-default": `${BASE_URL}/fr`,
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${lang}`,
+      siteName: "Domaformalis",
+      images: [{ url: "/og-image.png" }],
+      locale: lang === "fr" ? "fr_FR" : lang === "en" ? "en_US" : lang,
+      type: "website",
     },
   };
 }

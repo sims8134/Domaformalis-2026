@@ -1,7 +1,48 @@
+import type { Metadata } from "next";
 import { getDictionary } from '@/app/lib/get-dictionary';
 import FormationsCatalogue from '@/components/FormationsCatalogue';
 import Link from 'next/link';
 
+// --- CONFIGURATION SEO ---
+const BASE_URL = "https://domaformalis.com";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
+  const title = dict?.seo?.formations?.title || "Catalogue des Formations | Domaformalis";
+  const description = dict?.seo?.formations?.description || "Découvrez nos formations en langues, informatique, IA et réseaux sociaux. Des supports PDF clairs et accessibles pour progresser à votre rythme.";
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${BASE_URL}/${lang}/formations`,
+      languages: {
+        fr: `${BASE_URL}/fr/formations`,
+        en: `${BASE_URL}/en/formations`,
+        es: `${BASE_URL}/es/formations`,
+        bg: `${BASE_URL}/bg/formations`,
+        "x-default": `${BASE_URL}/fr/formations`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${lang}/formations`,
+      siteName: "Domaformalis",
+      images: [{ url: "/og-image.png" }],
+      locale: lang === "fr" ? "fr_FR" : lang === "en" ? "en_US" : lang,
+      type: "website",
+    },
+  };
+}
+
+// --- COMPOSANT DE LA PAGE ---
 export default async function FormationsPage({ params }: { params: Promise<{ lang: string }> }) {
   
   const { lang } = await params;

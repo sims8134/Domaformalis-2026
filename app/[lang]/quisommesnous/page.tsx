@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { getDictionary } from "@/app/lib/get-dictionary";
 import Link from "next/link";
 
-const BASE_URL = "https://www.domaformalis.com";
+// FIX : Cohérence totale avec le reste du site (pas de www)
+const BASE_URL = "https://domaformalis.com";
 
 export async function generateMetadata({
   params,
@@ -12,12 +13,8 @@ export async function generateMetadata({
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
-  const title =
-    dict?.seo?.about?.title || "Domaformalis | Qui sommes-nous ?";
-
-  const description =
-    dict?.seo?.about?.description ||
-    "Découvrez l’équipe, la mission et les valeurs de Domaformalis.";
+  const title = dict?.seo?.about?.title || "Qui sommes-nous ? | L'équipe Domaformalis";
+  const description = dict?.seo?.about?.description || "Découvrez l'histoire de Domaformalis, notre mission et l'équipe passionnée derrière vos formations digitales et linguistiques.";
 
   return {
     title,
@@ -31,6 +28,15 @@ export async function generateMetadata({
         bg: `${BASE_URL}/bg/quisommesnous`,
         "x-default": `${BASE_URL}/fr/quisommesnous`,
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${lang}/quisommesnous`,
+      siteName: "Domaformalis",
+      images: [{ url: "/og-image.png" }],
+      locale: lang === "fr" ? "fr_FR" : lang === "en" ? "en_US" : lang,
+      type: "website",
     },
   };
 }
