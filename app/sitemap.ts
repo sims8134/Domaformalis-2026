@@ -1,37 +1,38 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // On passe en non-www pour correspondre au reste de la config
   const baseUrl = "https://domaformalis.com";
-
-  const routes = [
+  
+  // 1. Tes langues
+  const locales = ["fr", "en", "es", "bg"];
+  
+  // 2. Toutes tes routes (basé sur ton build de tout à l'heure)
+  const pages = [
     "",
-    "/fr",
-    "/en",
-    "/es",
-    "/bg",
-    "/fr/formations",
-    "/en/formations",
-    "/es/formations",
-    "/bg/formations",
-    "/fr/ressources",
-    "/en/ressources",
-    "/es/ressources",
-    "/bg/ressources",
-    "/fr/contact",
-    "/en/contact",
-    "/es/contact",
-    "/bg/contact",
-    "/fr/quisommesnous",
-    "/en/quisommesnous",
-    "/es/quisommesnous",
-    "/bg/quisommesnous"
+    "/formations",
+    "/ressources",
+    "/quisommesnous",
+    "/contact",
+    "/membres",
+    "/legal",
+    "/cgu",
+    "/confidentialite"
   ];
 
-  return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly', // Optionnel : indique à Google que le contenu change souvent
-    priority: route === "" ? 1 : 0.8, // Optionnel : la page d'accueil est la plus importante
-  }));
+  const entries: MetadataRoute.Sitemap = [];
+
+  // 3. On génère automatiquement la grille complète (Langue x Page)
+  locales.forEach((lang) => {
+    pages.forEach((page) => {
+      entries.push({
+        url: `${baseUrl}/${lang}${page}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        // Priorité haute pour l'accueil, moyenne pour les pages, basse pour le légal
+        priority: page === "" ? 1.0 : (page === "/legal" || page === "/cgu" ? 0.3 : 0.8),
+      });
+    });
+  });
+
+  return entries;
 }
