@@ -52,7 +52,7 @@ export function getConfirmationEmail(lang: string, confirmToken: string) {
         <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:8px;padding:40px;border:1px solid #e2e8f0;">
           <tr>
             <td align="center" style="padding-bottom:24px;">
-              <img src="https://domaformalis.com/img/logo_domaformalis.png" alt="Domaformalis" style="height:50px;" />
+              <img src="https://domaformalis.com/img/logo_domaformalis.png" alt="Domaformalis" width="200" height="50" style="display:block;height:50px;width:auto;" />
             </td>
           </tr>
           <tr>
