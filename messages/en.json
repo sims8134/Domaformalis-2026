@@ -394,7 +394,7 @@
     "hero": {
       "tag": "📜 Legal information",
       "title": "Legal notice",
-      "desc": "In accordance with French Law no. 2004-575 of 21 June 2004 on confidence in the digital economy."
+      "desc": "In accordance with applicable European Union regulations and the laws of the country of establishment."
     },
     "updated": "Last updated: April 2026",
     "sections": [
@@ -423,7 +423,8 @@
         "title": "3. Intellectual property",
         "content": [
           "All content on the website domaformalis.com (texts, images, logos, courses, layouts, graphics) is the exclusive property of SOC TRADE BULGARIA EOOD and is protected by copyright and intellectual property law.",
-          "Any reproduction, representation, modification or exploitation, in whole or in part, of this content, by any means whatsoever, without the publisher's prior written permission, is strictly prohibited."
+          "Any reproduction, representation, modification or exploitation, in whole or in part, of this content, by any means whatsoever, without the publisher's prior written permission, is strictly prohibited.",
+          "The DOMAFORMALIS trademark is registered with the INPI (France) under number 4792776."
         ]
       },
       {

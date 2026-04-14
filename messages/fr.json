@@ -413,7 +413,7 @@
     "hero": {
       "tag": "📜 Informations légales",
       "title": "Mentions légales",
-      "desc": "Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique."
+      "desc": "Conformément aux réglementations applicables de l'Union européenne et au droit du pays d'établissement."
     },
     "updated": "Dernière mise à jour : Avril 2026",
     "sections": [
@@ -442,7 +442,8 @@
         "title": "3. Propriété intellectuelle",
         "content": [
           "L'ensemble du contenu du site domaformalis.com (textes, images, logos, formations, mises en page, graphismes) est la propriété exclusive de SOC TRADE BULGARIA EOOD et est protégé par le droit d'auteur et le droit de la propriété intellectuelle.",
-          "Toute reproduction, représentation, modification ou exploitation, totale ou partielle, de ces contenus, par quelque procédé que ce soit, sans l'autorisation écrite préalable de l'éditeur, est strictement interdite et constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle."
+          "Toute reproduction, représentation, modification ou exploitation, totale ou partielle, de ces contenus, par quelque procédé que ce soit, sans l'autorisation écrite préalable de l'éditeur, est strictement interdite et constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.",
+          "La marque DOMAFORMALIS est déposée à l'INPI (France) sous le numéro 4792776."
         ]
       },
       {
