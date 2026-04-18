@@ -424,7 +424,8 @@
           "<strong>Raison sociale :</strong> SOC TRADE BULGARIA EOOD",
           "<strong>Statut juridique :</strong> Société à responsabilité limitée de droit bulgare (EOOD)",
           "<strong>ЕИК (numéro d'identification) :</strong> 208209146",
-          "<strong>Siège social :</strong> 64A ul. Maragidik, 1505 Sofia, Bulgarie",
+"<strong>Capital social :</strong> 1 022 € (intégralement libéré)",
+"<strong>Siège social :</strong> 64A ul. Maragidik, 1505 Sofia, Bulgarie",
           "<strong>Responsable de la publication :</strong> Simon Beltran",
           "<strong>Contact :</strong> <a href='mailto:contact@domaformalis.com'>contact@domaformalis.com</a>"
         ]
@@ -495,8 +496,9 @@
         "content": [
           "Le responsable du traitement des données collectées sur le site <strong>domaformalis.com</strong> est :",
           "<strong>SOC TRADE BULGARIA EOOD</strong>",
-          "<strong>ЕИК :</strong> 208209146",
-          "<strong>Adresse :</strong> 64A ul. Maragidik, 1505 Sofia, Bulgarie",
+        "<strong>ЕИК (numéro d'identification) :</strong> 208209146",
+"<strong>Capital social :</strong> 1 022 € (intégralement libéré)",
+"<strong>Siège social :</strong> 64A ul. Maragidik, 1505 Sofia, Bulgarie",
           "<strong>Contact :</strong> <a href='mailto:contact@domaformalis.com'>contact@domaformalis.com</a>"
         ]
       },

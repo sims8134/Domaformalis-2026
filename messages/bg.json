@@ -412,8 +412,9 @@
           "Сайтът <strong>domaformalis.com</strong> се издава от:",
           "<strong>Фирма:</strong> СОЦ ТРЕЙД БЪЛГАРИЯ ЕООД",
           "<strong>Правна форма:</strong> Дружество с ограничена отговорност по българското право (ЕООД)",
-          "<strong>ЕИК:</strong> 208209146",
-          "<strong>Седалище:</strong> ул. Марагидик 64А, 1505 София, България",
+        "<strong>ЕИК:</strong> 208209146",
+"<strong>Капитал:</strong> 1 022 € (изцяло внесен)",
+"<strong>Седалище:</strong> ул. Марагидик 64А, 1505 София, България",
           "<strong>Отговорник за публикацията:</strong> Симон Белтран",
           "<strong>Контакт:</strong> <a href='mailto:contact@domaformalis.com'>contact@domaformalis.com</a>"
         ]
@@ -604,8 +605,9 @@
         "title": "2. Издател на сайта",
         "content": [
           "<strong>СОЦ ТРЕЙД БЪЛГАРИЯ ЕООД</strong>",
-          "<strong>ЕИК:</strong> 208209146",
-          "<strong>Адрес:</strong> ул. Марагидик 64А, 1505 София, България",
+         "<strong>ЕИК:</strong> 208209146",
+"<strong>Капитал:</strong> 1 022 € (изцяло внесен)",
+"<strong>Адрес:</strong> ул. Марагидик 64А, 1505 София, България",
           "<strong>Контакт:</strong> <a href='mailto:contact@domaformalis.com'>contact@domaformalis.com</a>",
           "За повече подробности вижте нашите <a href='/bg/legal'>Правни бележки</a>."
         ]

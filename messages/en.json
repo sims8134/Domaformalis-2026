@@ -405,7 +405,8 @@
           "<strong>Business name:</strong> SOC TRADE BULGARIA EOOD",
           "<strong>Legal status:</strong> Single-member limited liability company under Bulgarian law (EOOD)",
           "<strong>ЕИК (identification number):</strong> 208209146",
-          "<strong>Registered office:</strong> 64A ul. Maragidik, 1505 Sofia, Bulgaria",
+"<strong>Share capital:</strong> €1,022 (fully paid up)",
+"<strong>Registered office:</strong> 64A ul. Maragidik, 1505 Sofia, Bulgaria",
           "<strong>Publishing director:</strong> Simon Beltran",
           "<strong>Contact:</strong> <a href='mailto:contact@domaformalis.com'>contact@domaformalis.com</a>"
         ]
@@ -595,8 +596,9 @@
         "title": "2. Website publisher",
         "content": [
           "<strong>SOC TRADE BULGARIA EOOD</strong>",
-          "<strong>ЕИК:</strong> 208209146",
-          "<strong>Address:</strong> 64A ul. Maragidik, 1505 Sofia, Bulgaria",
+      "<strong>ЕИК:</strong> 208209146",
+"<strong>Share capital:</strong> €1,022 (fully paid up)",
+"<strong>Address:</strong> 64A ul. Maragidik, 1505 Sofia, Bulgaria",
           "<strong>Contact:</strong> <a href='mailto:contact@domaformalis.com'>contact@domaformalis.com</a>",
           "For more details, see our <a href='/en/legal'>Legal notice</a>."
         ]
