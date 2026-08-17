@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getAllArticles } from '@/app/lib/articles'
 import { PARCOURS } from '@/app/lib/parcours'
-import { LANGUE_COURSES } from '@/app/lib/langues'
 
 const baseUrl = "https://domaformalis.com";
 const locales = ["fr", "en", "es", "bg"];
@@ -90,22 +89,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: 'monthly',
         priority: 0.8,
         alternates: { languages },
-      });
-    });
-  });
-
-  LANGUE_COURSES.forEach((c) => {
-    locales.forEach((lang) => {
-      entries.push({
-        url: `${baseUrl}/${lang}/langues/${c.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.9,
-        alternates: {
-          languages: Object.fromEntries(
-            locales.map((l) => [l, `${baseUrl}/${l}/langues/${c.slug}`])
-          ),
-        },
       });
     });
   });
