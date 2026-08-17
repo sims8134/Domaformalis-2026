@@ -9,6 +9,13 @@ interface HeaderProps {
   dict: any;
 }
 
+const LANGS = [
+  { code: "fr", flag: "https://flagcdn.com/w40/fr.png", label: "Français" },
+  { code: "es", flag: "https://flagcdn.com/w40/es.png", label: "Español" },
+  { code: "bg", flag: "https://flagcdn.com/w40/bg.png", label: "Български" },
+  { code: "en", flag: "https://flagcdn.com/w40/gb.png", label: "English" },
+];
+
 export default function Header({ lang, dict }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -27,10 +34,10 @@ export default function Header({ lang, dict }: HeaderProps) {
 
   return (
     <header>
-      <nav>
+      <nav aria-label="Navigation principale">
         <div className="nav-logo">
           <Link href={`/${lang}`} onClick={closeMenu}>
-            <img src="/img/logo_domaformalis.svg" alt="Logo" />
+            <img src="/img/logo_domaformalis.svg" alt="Domaformalis — accueil" />
           </Link>
         </div>
 
@@ -38,7 +45,11 @@ export default function Header({ lang, dict }: HeaderProps) {
           <Link href={`/${lang}`} className={pathname === `/${lang}` ? "active" : ""} onClick={closeMenu}>
             {dict.home}
           </Link>
-          <Link href={`/${lang}/formations`} className={pathname.includes("/formations") ? "active" : ""} onClick={closeMenu}>
+          <Link
+            href={`/${lang}/formations`}
+            className={pathname.includes("/formations") || pathname.includes("/articles") || pathname.includes("/langues") ? "active" : ""}
+            onClick={closeMenu}
+          >
             {dict.formations}
           </Link>
           <Link href={`/${lang}/ressources`} className={pathname.includes("/ressources") ? "active" : ""} onClick={closeMenu}>
@@ -55,24 +66,29 @@ export default function Header({ lang, dict }: HeaderProps) {
           </Link>
         </div>
 
-        <div className="lang-switcher">
-          <button className={`lang-btn ${lang === "fr" ? "active" : ""}`} onClick={() => switchLanguage("fr")}>
-            <img src="https://flagcdn.com/w40/fr.png" alt="FR" />
-          </button>
-          <button className={`lang-btn ${lang === "es" ? "active" : ""}`} onClick={() => switchLanguage("es")}>
-            <img src="https://flagcdn.com/w40/es.png" alt="ES" />
-          </button>
-          <button className={`lang-btn ${lang === "bg" ? "active" : ""}`} onClick={() => switchLanguage("bg")}>
-            <img src="https://flagcdn.com/w40/bg.png" alt="BG" />
-          </button>
-          <button className={`lang-btn ${lang === "en" ? "active" : ""}`} onClick={() => switchLanguage("en")}>
-            <img src="https://flagcdn.com/w40/gb.png" alt="EN" />
-          </button>
+        <div className="lang-switcher" role="group" aria-label="Langue du site">
+          {LANGS.map((l) => (
+            <button
+              key={l.code}
+              className={`lang-btn ${lang === l.code ? "active" : ""}`}
+              onClick={() => switchLanguage(l.code)}
+              aria-label={l.label}
+              aria-pressed={lang === l.code}
+            >
+              <img src={l.flag} alt="" aria-hidden="true" />
+            </button>
+          ))}
         </div>
 
-        <div className="burger" onClick={toggleMenu}>
+        <button
+          type="button"
+          className="burger"
+          onClick={toggleMenu}
+          aria-label="Menu"
+          aria-expanded={isMenuOpen}
+        >
           <span></span><span></span><span></span>
-        </div>
+        </button>
       </nav>
     </header>
   );

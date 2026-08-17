@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getDictionary } from "../../lib/get-dictionary";
 
-const BASE_URL = "https://www.domaformalis.com";
+const BASE_URL = "https://domaformalis.com";
 
 type PageProps = {
   params: Promise<{

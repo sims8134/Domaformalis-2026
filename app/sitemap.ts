@@ -1,35 +1,111 @@
 import { MetadataRoute } from 'next'
+import { getAllArticles } from '@/app/lib/articles'
+import { PARCOURS } from '@/app/lib/parcours'
+import { LANGUE_COURSES } from '@/app/lib/langues'
+
+const baseUrl = "https://domaformalis.com";
+const locales = ["fr", "en", "es", "bg"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://domaformalis.com";
-  
-  // 1. Tes langues
-  const locales = ["fr", "en", "es", "bg"];
-  
-  // 2. Toutes tes routes (basé sur ton build de tout à l'heure)
+  const entries: MetadataRoute.Sitemap = [];
+
+  // ---------------------------------------------------------------
+  // 1. Pages statiques
+  // ---------------------------------------------------------------
   const pages = [
     "",
     "/formations",
+    "/articles",
     "/ressources",
+    "/membres",
     "/quisommesnous",
     "/contact",
-    "/membres",
     "/legal",
     "/cgu",
-    "/confidentialite"
+    "/confidentialite",
   ];
 
-  const entries: MetadataRoute.Sitemap = [];
-
-  // 3. On génère automatiquement la grille complète (Langue x Page)
-  locales.forEach((lang) => {
-    pages.forEach((page) => {
+  pages.forEach((page) => {
+    locales.forEach((lang) => {
       entries.push({
         url: `${baseUrl}/${lang}${page}`,
         lastModified: new Date(),
-        changeFrequency: 'weekly',
-        // Priorité haute pour l'accueil, moyenne pour les pages, basse pour le légal
-        priority: page === "" ? 1.0 : (page === "/legal" || page === "/cgu" ? 0.3 : 0.8),
+        changeFrequency: page === "" || page === "/articles" ? 'weekly' : 'monthly',
+        priority:
+          page === "" ? 1.0
+          : page === "/articles" || page === "/formations" ? 0.9
+          : page === "/legal" || page === "/cgu" || page === "/confidentialite" ? 0.3
+          : 0.7,
+        alternates: {
+          languages: Object.fromEntries(locales.map((l) => [l, `${baseUrl}/${l}${page}`])),
+        },
+      });
+    });
+  });
+
+  // ---------------------------------------------------------------
+  // 2. Parcours (3 × 4 langues)
+  // ---------------------------------------------------------------
+  PARCOURS.forEach((p) => {
+    locales.forEach((lang) => {
+      entries.push({
+        url: `${baseUrl}/${lang}/formations/${p.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.9,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((l) => [l, `${baseUrl}/${l}/formations/${p.slug}`])
+          ),
+        },
+      });
+    });
+  });
+
+  // ---------------------------------------------------------------
+  // 3. Articles (13 × 4 langues)
+  //    Les slugs diffèrent d'une langue à l'autre : on les relie par
+  //    leur numéro d'ordre pour générer des alternates corrects.
+  // ---------------------------------------------------------------
+  const byLang = Object.fromEntries(locales.map((l) => [l, getAllArticles(l)]));
+
+  locales.forEach((lang) => {
+    byLang[lang].forEach((article) => {
+      const num = article.order.match(/^(\d+)-/)?.[1];
+
+      const languages = Object.fromEntries(
+        locales
+          .map((l) => {
+            const twin = num
+              ? byLang[l].find((a) => a.order.startsWith(`${num}-`))
+              : byLang[l].find((a) => a.slug === article.slug);
+            return twin ? [l, `${baseUrl}/${l}/articles/${twin.slug}`] : null;
+          })
+          .filter(Boolean) as [string, string][]
+      );
+
+      entries.push({
+        url: `${baseUrl}/${lang}/articles/${article.slug}`,
+        lastModified: article.date ? new Date(article.date) : new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+        alternates: { languages },
+      });
+    });
+  });
+
+  LANGUE_COURSES.forEach((c) => {
+    locales.forEach((lang) => {
+      entries.push({
+        url: `${baseUrl}/${lang}/langues/${c.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.9,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((l) => [l, `${baseUrl}/${l}/langues/${c.slug}`])
+          ),
+        },
       });
     });
   });

@@ -26,7 +26,7 @@ export default function Footer({ lang, dict }: FooterProps) {
         <div className="footer-inner">
           <div className="footer-top">
             <div className="footer-brand">
-              <img src="/img/logo_domaformalis.png" alt="Logo" />
+              <img src="/img/logo_domaformalis.png" alt="Domaformalis" />
               <p>{footer?.tagline || "Easy training for everyone, everywhere."}</p>
               <div className="footer-social">
                 <a href="https://www.facebook.com/profile.php?id=61577432794087" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">📱</a>

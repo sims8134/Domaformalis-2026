@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getDictionary } from "../lib/get-dictionary";
 import FoundersCarousel from "../../components/FoundersCarousel";
-import FormationsTabs from "../../components/FormationsTabs";
+import HomeCatalogue from "../../components/HomeCatalogue";
 import ValuesSection from "../../components/ValuesSection";
 import Hero from "../../components/Hero";
 import Link from "next/link";
@@ -59,8 +59,8 @@ export default async function HomePage({
       {/* HERO */}
       <Hero dict={dict} lang={lang} />
 
-      {/* CATALOGUE DES FORMATIONS */}
-      <FormationsTabs dict={dict} />
+      {/* CATALOGUE — cartes parcours (pile de vignettes) + cours de langues */}
+      <HomeCatalogue lang={lang} />
 
       {/* FONDATEURS */}
       <FoundersCarousel dict={dict} />
