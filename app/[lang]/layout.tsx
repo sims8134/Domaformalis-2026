@@ -4,8 +4,10 @@ import Footer from "../../components/Footer";
 import { Poppins, Nunito } from "next/font/google";
 import { getDictionary } from "../lib/get-dictionary";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 const BASE_URL = "https://domaformalis.com";
+const LOCALES = ["fr", "en", "es", "bg"];
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -43,16 +45,10 @@ export const metadata: Metadata = {
     },
   },
 
-  alternates: {
-    canonical: "/",
-    languages: {
-      "fr-FR": "/fr",
-      "en-US": "/en",
-      "es-ES": "/es",
-      "bg-BG": "/bg",
-      "x-default": "/fr",
-    },
-  },
+  /* NB : pas d'alternates ici. Un canonical défini dans le layout est hérité
+     par toutes les pages qui n'en déclarent pas — elles se présenteraient
+     alors toutes comme des copies de la racine. Chaque page définit le sien
+     dans son generateMetadata. */
 
   openGraph: {
     type: "website",
@@ -119,6 +115,11 @@ export default async function RootLayout({
 }>) {
   const resolvedParams = await params;
   const lang = resolvedParams?.lang || "fr";
+
+  // Toute locale inconnue (ex. /og-image.png, /xyz) rend un vrai 404
+  // au lieu de la page d'accueil en version cassée.
+  if (!LOCALES.includes(lang)) notFound();
+
   const dict = await getDictionary(lang);
 
   return (
