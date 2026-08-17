@@ -7,6 +7,12 @@ interface FooterProps {
 
 export default function Footer({ lang, dict }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const credit: Record<string, string> = {
+    fr: "Site réalisé par",
+    en: "Website by",
+    es: "Sitio creado por",
+    bg: "Уебсайт от",
+  };
   const footer = dict?.footer;
   const newsletter = dict?.newsletter;
 
@@ -63,7 +69,19 @@ export default function Footer({ lang, dict }: FooterProps) {
           </div>
 
           <div className="footer-bottom">
-            <p>{footer?.copyright || `© ${currentYear} Domaformalis.com — All rights reserved.`}</p>
+            <p>
+              {footer?.copyright || `© ${currentYear} Domaformalis.com — All rights reserved.`}
+              {" · "}
+              {credit[lang] ?? credit.fr}{" "}
+              <a
+                href="https://sbcconception.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-sbc"
+              >
+                SBCConception
+              </a>
+            </p>
             <a href="#top">{footer?.backTop || "Back to top ↑"}</a>
           </div>
         </div>

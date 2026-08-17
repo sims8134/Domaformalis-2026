@@ -1833,3 +1833,7 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
 .hl-flag img { width: 30px; height: auto; border-radius: 4px; display: block; }
 .teaser-flag-img { width: 26px; height: auto; border-radius: 4px; display: block; }
 .fiche-flag-img { width: 24px; height: auto; border-radius: 3px; display: block; }
+/* --- Crédit SBCConception dans le footer --- */
+.footer-bottom .footer-sbc { color: #7ed957; text-decoration: none; font-weight: 600; }
+.footer-bottom .footer-sbc:hover { text-decoration: underline; }
+.footer-bottom .footer-sbc:focus-visible { outline: 2px solid #7ed957; outline-offset: 2px; }
