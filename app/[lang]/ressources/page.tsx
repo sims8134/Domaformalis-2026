@@ -3,8 +3,7 @@ import { getDictionary } from "@/app/lib/get-dictionary";
 import RessourcesFiches from "@/components/RessourcesFiches";
 import RessourcesTips from "@/components/RessourcesTips";
 import Link from "next/link";
-// FIX : Cohérence avec le layout (pas de www)
-const BASE_URL = "https://domaformalis.com";
+import { BASE_URL, buildAlternates } from "@/app/lib/seo";
 export async function generateMetadata({
   params,
 }: {
@@ -17,16 +16,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: {
-      canonical: `${BASE_URL}/${lang}/ressources`,
-      languages: {
-        fr: `${BASE_URL}/fr/ressources`,
-        en: `${BASE_URL}/en/ressources`,
-        es: `${BASE_URL}/es/ressources`,
-        bg: `${BASE_URL}/bg/ressources`,
-        "x-default": `${BASE_URL}/fr/ressources`,
-      },
-    },
+    alternates: buildAlternates(lang, "/ressources"),
     openGraph: {
       title,
       description,

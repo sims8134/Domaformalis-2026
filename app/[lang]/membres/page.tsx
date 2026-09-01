@@ -3,8 +3,8 @@ import Link from "next/link";
 import { getDictionary } from "@/app/lib/get-dictionary";
 import GuideForm from "@/components/GuideForm";
 import { PARCOURS } from "@/app/lib/parcours";
+import { BASE_URL, buildAlternates } from "@/app/lib/seo";
 
-const BASE_URL = "https://domaformalis.com";
 
 type PageProps = {
   params: Promise<{ lang: string }>;
@@ -62,16 +62,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description,
-    alternates: {
-      canonical: `${BASE_URL}/${lang}/membres`,
-      languages: {
-        fr: `${BASE_URL}/fr/membres`,
-        en: `${BASE_URL}/en/membres`,
-        es: `${BASE_URL}/es/membres`,
-        bg: `${BASE_URL}/bg/membres`,
-        "x-default": `${BASE_URL}/fr/membres`,
-      },
-    },
+    alternates: buildAlternates(lang, "/membres"),
     openGraph: {
       title,
       description,

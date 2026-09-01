@@ -3,9 +3,11 @@ import path from "node:path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { LOCALES } from "./seo";
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "articles");
-export const LANGS = ["fr", "en", "es", "bg"] as const;
+/** Alias historique : la liste des locales vit désormais dans seo.ts. */
+export const LANGS = LOCALES;
 export type Category = "securite-en-ligne" | "reseaux-sociaux" | "ia";
 
 export type ArticleMeta = {
@@ -95,6 +97,36 @@ export function getAllParams() {
   for (const lang of LANGS) for (const a of getAllArticles(lang)) out.push({ lang, slug: a.slug });
   return out;
 }
+/**
+ * Chemins `/articles/<slug>` de l'article dans chaque langue où il existe.
+ * Les slugs étant traduits, la correspondance passe par le numéro d'ordre du
+ * fichier (01-, 02-…). Une langue sans équivalent est simplement absente de
+ * la map : aucune URL n'est construite sans avoir été vérifiée.
+ */
+export function getArticlePathsByLang(slug: string): Record<string, string> {
+  const want = strip(slug);
+  const byLang: Record<string, ArticleMeta[]> = {};
+  for (const l of LANGS) byLang[l] = getAllArticles(l);
+
+  // Numéro d'ordre de l'article, quelle que soit la langue du slug reçu.
+  let num: string | undefined;
+  for (const l of LANGS) {
+    const found = byLang[l].find((a) => a.slug === want || strip(a.order) === want);
+    if (found) {
+      num = found.order.match(/^(\d+)-/)?.[1];
+      break;
+    }
+  }
+  if (!num) return {};
+
+  const out: Record<string, string> = {};
+  for (const l of LANGS) {
+    const twin = byLang[l].find((a) => a.order.startsWith(`${num}-`));
+    if (twin) out[l] = `/articles/${twin.slug}`;
+  }
+  return out;
+}
+
 /** Retrouve l'équivalent d'un slug dans une autre langue (via le numéro d'ordre du fichier). */
 export function resolveSlugInLang(targetLang: string, slug: string): string | null {
   const want = slug.replace(/\.md$/, "").replace(/^\d+-/, "");

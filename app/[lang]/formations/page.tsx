@@ -4,8 +4,8 @@ import Image from "next/image";
 import { getDictionary } from "@/app/lib/get-dictionary";
 import { getArticlesByCategory } from "@/app/lib/articles";
 import { PARCOURS } from "@/app/lib/parcours";
+import { BASE_URL, buildAlternates } from "@/app/lib/seo";
 
-const BASE_URL = "https://domaformalis.com";
 
 const T: Record<string, Record<string, string>> = {
   tag: { fr: "🎓 Formations", en: "🎓 Courses", es: "🎓 Formaciones", bg: "🎓 Обучения" },
@@ -71,16 +71,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: {
-      canonical: `${BASE_URL}/${lang}/formations`,
-      languages: {
-        fr: `${BASE_URL}/fr/formations`,
-        en: `${BASE_URL}/en/formations`,
-        es: `${BASE_URL}/es/formations`,
-        bg: `${BASE_URL}/bg/formations`,
-        "x-default": `${BASE_URL}/fr/formations`,
-      },
-    },
+    alternates: buildAlternates(lang, "/formations"),
     openGraph: {
       title,
       description,

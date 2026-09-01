@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getDictionary } from "../../lib/get-dictionary";
+import { buildAlternates } from "@/app/lib/seo";
 
-const BASE_URL = "https://domaformalis.com";
 
 type PageProps = {
   params: Promise<{
@@ -21,16 +21,7 @@ export async function generateMetadata({
     description:
       dict?.seo?.legal?.description ||
       "Consultez les mentions légales de Domaformalis.",
-    alternates: {
-      canonical: `${BASE_URL}/${lang}/legal`,
-      languages: {
-        fr: `${BASE_URL}/fr/legal`,
-        en: `${BASE_URL}/en/legal`,
-        es: `${BASE_URL}/es/legal`,
-        bg: `${BASE_URL}/bg/legal`,
-        "x-default": `${BASE_URL}/fr/legal`,
-      },
-    },
+    alternates: buildAlternates(lang, "/legal"),
   };
 }
 

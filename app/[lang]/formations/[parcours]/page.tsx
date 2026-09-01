@@ -4,9 +4,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getAllArticles } from "@/app/lib/articles";
 import { PARCOURS, getParcours } from "@/app/lib/parcours";
+import { BASE_URL, LOCALES, buildAlternates } from "@/app/lib/seo";
 
-const BASE_URL = "https://domaformalis.com";
-const LANGS = ["fr", "en", "es", "bg"];
 
 const T: Record<string, Record<string, string>> = {
   tag: { fr: "🎓 Parcours", en: "🎓 Track", es: "🎓 Itinerario", bg: "🎓 Пътека" },
@@ -41,7 +40,7 @@ const T: Record<string, Record<string, string>> = {
 const t = (k: string, l: string) => T[k][l] ?? T[k].fr;
 
 export async function generateStaticParams() {
-  return LANGS.flatMap((lang) => PARCOURS.map((p) => ({ lang, parcours: p.slug })));
+  return LOCALES.flatMap((lang) => PARCOURS.map((p) => ({ lang, parcours: p.slug })));
 }
 
 export async function generateMetadata({
@@ -58,12 +57,7 @@ export async function generateMetadata({
   return {
     title: `${i.name} — Parcours de formation gratuit | Domaformalis`,
     description: i.promise,
-    alternates: {
-      canonical: url,
-      languages: Object.fromEntries(
-        LANGS.map((l) => [l, `${BASE_URL}/${l}/formations/${parcours}`])
-      ),
-    },
+    alternates: buildAlternates(lang, `/formations/${parcours}`),
     openGraph: {
       title: `${i.name} | Domaformalis`,
       description: i.promise,

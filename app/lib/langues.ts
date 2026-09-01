@@ -11,6 +11,8 @@
  * détermine pas la langue du document — d'où le sélecteur.
  */
 
+import { LOCALES } from "./seo";
+
 export type TeachLang = "fr" | "bg" | "es" | "en";
 
 export type Sheet = {
@@ -288,6 +290,15 @@ export const LANGUE_COURSES: LangueCourse[] = [
     ],
   },
 ];
+
+/**
+ * Paramètres statiques de /[lang]/langues/[cours] — source unique partagée
+ * par la page (generateStaticParams) et le sitemap, pour qu'un cours ajouté
+ * à LANGUE_COURSES apparaisse automatiquement dans les deux.
+ */
+export function getAllLangueParams(): { lang: string; cours: string }[] {
+  return LOCALES.flatMap((lang) => LANGUE_COURSES.map((c) => ({ lang, cours: c.slug })));
+}
 
 export function getLangueCourse(slug: string) {
   return LANGUE_COURSES.find((c) => c.slug === slug) ?? null;

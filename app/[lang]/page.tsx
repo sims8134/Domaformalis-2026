@@ -5,9 +5,8 @@ import HomeCatalogue from "../../components/HomeCatalogue";
 import ValuesSection from "../../components/ValuesSection";
 import Hero from "../../components/Hero";
 import Link from "next/link";
+import { BASE_URL, buildAlternates } from "@/app/lib/seo";
 
-// FIX : On retire le 'www' pour être raccord avec le layout.tsx
-const BASE_URL = "https://domaformalis.com";
 
 export async function generateMetadata({
   params,
@@ -23,17 +22,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: {
-      // On s'assure que l'URL canonique est propre (sans www)
-      canonical: `${BASE_URL}/${lang}`,
-      languages: {
-        fr: `${BASE_URL}/fr`,
-        en: `${BASE_URL}/en`,
-        es: `${BASE_URL}/es`,
-        bg: `${BASE_URL}/bg`,
-        "x-default": `${BASE_URL}/fr`,
-      },
-    },
+    alternates: buildAlternates(lang, ""),
     openGraph: {
       title,
       description,

@@ -2,15 +2,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import LangueCourseView from "@/components/LangueCourseView";
 import {
-  LANGUE_COURSES,
+  getAllLangueParams,
   getLangueCourse,
   defaultTeachLang,
   TEACH_LABEL,
   TEACH_FLAG,
 } from "@/app/lib/langues";
+import { BASE_URL, buildAlternates } from "@/app/lib/seo";
 
-const BASE_URL = "https://domaformalis.com";
-const LANGS = ["fr", "en", "es", "bg"];
 
 const T: Record<string, Record<string, string>> = {
   tag: { fr: "🎓 Cours de langue", en: "🎓 Language course", es: "🎓 Curso de idiomas", bg: "🎓 Езиков курс" },
@@ -25,7 +24,7 @@ const T: Record<string, Record<string, string>> = {
 const t = (k: string, l: string) => T[k][l] ?? T[k].fr;
 
 export async function generateStaticParams() {
-  return LANGS.flatMap((lang) => LANGUE_COURSES.map((c) => ({ lang, cours: c.slug })));
+  return getAllLangueParams();
 }
 
 export async function generateMetadata({
@@ -42,10 +41,7 @@ export async function generateMetadata({
   return {
     title: `${i.name} — Cours gratuit avec fiches et leçons PDF | Domaformalis`,
     description: i.promise,
-    alternates: {
-      canonical: url,
-      languages: Object.fromEntries(LANGS.map((l) => [l, `${BASE_URL}/${l}/langues/${cours}`])),
-    },
+    alternates: buildAlternates(lang, `/langues/${cours}`),
     openGraph: {
       title: `${i.name} | Domaformalis`,
       description: i.promise,

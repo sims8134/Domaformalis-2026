@@ -1,20 +1,24 @@
 import { MetadataRoute } from 'next'
 import { getAllArticles } from '@/app/lib/articles'
 import { PARCOURS } from '@/app/lib/parcours'
+import { getAllLangueParams } from '@/app/lib/langues'
+import { BASE_URL, LOCALES } from '@/app/lib/seo'
 
-const baseUrl = "https://domaformalis.com";
-const locales = ["fr", "en", "es", "bg"];
+const baseUrl = BASE_URL;
+const locales = [...LOCALES];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   // ---------------------------------------------------------------
   // 1. Pages statiques
+  //    NB : /articles n'y figure pas — la route redirige vers /formations
+  //    (app/[lang]/articles/page.tsx). Une URL qui redirige dans un sitemap
+  //    est signalée en erreur par la Search Console.
   // ---------------------------------------------------------------
   const pages = [
     "",
     "/formations",
-    "/articles",
     "/ressources",
     "/membres",
     "/quisommesnous",
@@ -29,10 +33,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${baseUrl}/${lang}${page}`,
         lastModified: new Date(),
-        changeFrequency: page === "" || page === "/articles" ? 'weekly' : 'monthly',
+        changeFrequency: page === "" ? 'weekly' : 'monthly',
         priority:
           page === "" ? 1.0
-          : page === "/articles" || page === "/formations" ? 0.9
+          : page === "/formations" ? 0.9
           : page === "/legal" || page === "/cgu" || page === "/confidentialite" ? 0.3
           : 0.7,
         alternates: {
@@ -62,7 +66,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   // ---------------------------------------------------------------
-  // 3. Articles (13 × 4 langues)
+  // 3. Cours de langues (2 × 4 langues)
+  //    Les paramètres viennent de getAllLangueParams(), la même source que
+  //    le generateStaticParams de la page : un cours ajouté à
+  //    LANGUE_COURSES entre ici automatiquement.
+  // ---------------------------------------------------------------
+  getAllLangueParams().forEach(({ lang, cours }) => {
+    entries.push({
+      url: `${baseUrl}/${lang}/langues/${cours}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+      alternates: {
+        languages: Object.fromEntries(
+          locales.map((l) => [l, `${baseUrl}/${l}/langues/${cours}`])
+        ),
+      },
+    });
+  });
+
+  // ---------------------------------------------------------------
+  // 4. Articles (13 × 4 langues)
   //    Les slugs diffèrent d'une langue à l'autre : on les relie par
   //    leur numéro d'ordre pour générer des alternates corrects.
   // ---------------------------------------------------------------

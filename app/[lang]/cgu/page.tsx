@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getDictionary } from "../../lib/get-dictionary";
+import { buildAlternates } from "@/app/lib/seo";
 
-const BASE_URL = "https://domaformalis.com";
 
 type PageProps = {
   params: Promise<{
@@ -20,16 +20,7 @@ export async function generateMetadata({
     description:
       dict?.seo?.cgu?.description ||
       "Consultez les conditions générales d'utilisation du site Domaformalis.",
-    alternates: {
-      canonical: `${BASE_URL}/${lang}/cgu`,
-      languages: {
-        fr: `${BASE_URL}/fr/cgu`,
-        en: `${BASE_URL}/en/cgu`,
-        es: `${BASE_URL}/es/cgu`,
-        bg: `${BASE_URL}/bg/cgu`,
-        "x-default": `${BASE_URL}/fr/cgu`,
-      },
-    },
+    alternates: buildAlternates(lang, "/cgu"),
   };
 }
 

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { getDictionary } from "@/app/lib/get-dictionary";
 import Link from "next/link";
+import { BASE_URL, buildAlternates } from "@/app/lib/seo";
 
-// FIX : Cohérence totale avec le reste du site (pas de www)
-const BASE_URL = "https://domaformalis.com";
 
 export async function generateMetadata({
   params,
@@ -19,16 +18,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: {
-      canonical: `${BASE_URL}/${lang}/quisommesnous`,
-      languages: {
-        fr: `${BASE_URL}/fr/quisommesnous`,
-        en: `${BASE_URL}/en/quisommesnous`,
-        es: `${BASE_URL}/es/quisommesnous`,
-        bg: `${BASE_URL}/bg/quisommesnous`,
-        "x-default": `${BASE_URL}/fr/quisommesnous`,
-      },
-    },
+    alternates: buildAlternates(lang, "/quisommesnous"),
     openGraph: {
       title,
       description,

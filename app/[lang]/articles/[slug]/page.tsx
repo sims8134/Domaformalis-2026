@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
-import { getArticle, getSiblings, getAllParams, CATEGORY_LABELS, resolveSlugInLang } from "@/app/lib/articles";
+import { getArticle, getSiblings, getAllParams, CATEGORY_LABELS, resolveSlugInLang, getArticlePathsByLang } from "@/app/lib/articles";
 import { getDictionary } from "@/app/lib/get-dictionary";
+import { BASE_URL, buildAlternates } from "@/app/lib/seo";
 
 
-const BASE_URL = "https://domaformalis.com";
 
 const T: Record<string, Record<string, string>> = {
   back: { fr: "Tous les articles", en: "All articles", es: "Todos los artículos", bg: "Всички статии" },
@@ -47,7 +47,7 @@ export async function generateMetadata({
     title: `${a.title} | Domaformalis`,
     description: a.description,
     keywords: a.tags,
-    alternates: { canonical: url },
+    alternates: buildAlternates(lang, `/articles/${slug}`, getArticlePathsByLang(slug)),
     openGraph: {
       type: "article",
       title: a.title,
