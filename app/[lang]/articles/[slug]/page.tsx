@@ -37,6 +37,12 @@ export async function generateMetadata({
 
   const url = `${BASE_URL}/${lang}/articles/${slug}`;
 
+  // Version 1200x630 dédiée au partage (dossier /og/), avec repli sur
+  // l'image générique du site si un article n'a pas de cover.
+  const ogImage = a.image
+    ? a.image.replace("/img/articles/", "/img/articles/og/")
+    : "/og-image.png";
+
   return {
     title: `${a.title} | Domaformalis`,
     description: a.description,
@@ -49,7 +55,7 @@ export async function generateMetadata({
       url,
       siteName: "Domaformalis",
       publishedTime: a.date,
-      images: [{ url: a.image.replace("/articles/", "/articles/og/"), width: 1200, height: 630, alt: a.title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: a.title }],
       locale: lang === "fr" ? "fr_FR" : lang === "en" ? "en_US" : lang,
     },
     twitter: {
@@ -57,7 +63,7 @@ export async function generateMetadata({
       site: "@domaformalis",
       title: a.title,
       description: a.description,
-      images: [a.image],
+      images: [ogImage],
     },
   };
 }
