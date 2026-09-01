@@ -407,7 +407,7 @@ nav { max-width: 1280px; margin: auto; padding: 0 24px; height: 70px; display: f
   flex-shrink: 0;
 }
 
-/* FERMГ‰ par dГ©faut */
+/* FERMÉ par défaut */
 .faq-answer {
   max-height: 0;
   padding: 0;
@@ -458,7 +458,7 @@ nav { max-width: 1280px; margin: auto; padding: 0 24px; height: 70px; display: f
 
 /* Placeholder overlay */
 .placeholder-overlay { position: relative; }
-.placeholder-overlay::after { content: "BientГґt disponible"; position: absolute; inset: 0; background: rgba(255,255,255,0.82); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; color: var(--gray); letter-spacing: 0.05em; backdrop-filter: blur(2px); }
+.placeholder-overlay::after { content: "Bientôt disponible"; position: absolute; inset: 0; background: rgba(255,255,255,0.82); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; color: var(--gray); letter-spacing: 0.05em; backdrop-filter: blur(2px); }
 
 /* Liens utiles */
 .liens-section { background: var(--light); padding: 80px 30px; }
@@ -546,6 +546,10 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
   .nav-links { display: none; }
   .burger { display: flex; }
   .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: white; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); gap: 6px; z-index: 200; }
+  /* FIX 2026-09 : header compact — le burger sortait de l'écran sur ~412px */
+  nav { padding: 0 14px; gap: 6px; }
+  .nav-logo img { height: 42px; }
+  .lang-switcher { gap: 2px; }
   .hero { padding: 60px 20px 70px; }
   .hero-text h1 { font-size: 3rem; }
   .hero-visual { grid-template-columns: 1fr; }
@@ -587,7 +591,7 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
 /* ================================================================
-   QUI SOMMES-NOUS вЂ” COLLER DANS globals.css
+   QUI SOMMES-NOUS — COLLER DANS globals.css
    ================================================================ */
 
 /* Intro / Mission */
@@ -596,7 +600,7 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
 .intro-section p { font-size: 1.65rem; color: var(--gray); line-height: 1.9; margin-bottom: 14px; }
 .intro-section p strong { color: var(--teal); }
 
-/* Г‰quipe */
+/* Équipe */
 .equipe-section { background: var(--light); padding: 80px 30px; }
 .equipe-inner { max-width: 1100px; margin: auto; }
 .equipe-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
@@ -611,8 +615,6 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
 .avatar-yasmine { background: linear-gradient(135deg, #fce6f3, #f8b8dc); }
 .membre-id h3 { font-family: var(--font-nunito), sans-serif; font-size: 2.6rem; font-weight: 900; color: var(--dark); margin-bottom: 4px; }
 .membre-role { display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 1.3rem; font-weight: 700; }
-.role-simon { background: rgba(12,192,223,0.12); color: var(--teal); }
-.role-yasmine { background: rgba(233,30,140,0.1); color: #c0177a; }
 .membre-body { padding: 0 36px 36px; }
 .membre-body p { font-size: 1.55rem; color: var(--gray); line-height: 1.8; margin-bottom: 24px; }
 .membre-tags { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -643,8 +645,8 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
   .membre-top { flex-direction: column; text-align: center; }
 }
 /* ================================================================
-   PAGES LГ‰GALES вЂ” COLLER DANS globals.css
-   (fonctionne pour mentions lГ©gales, CGU, confidentialitГ©)
+   PAGES LÉGALES — COLLER DANS globals.css
+   (fonctionne pour mentions légales, CGU, confidentialité)
    ================================================================ */
 
 .legal-section { padding: 60px 30px 80px; }
@@ -884,7 +886,11 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
   .launch-btn-secondary {
     width: 100%;
   }
-  /* Newsletter section */
+}
+
+/* Newsletter section
+   FIX 2026-09 : ce bloc était emprisonné dans la media query 640px
+   ci-dessus — la newsletter n'avait aucun style en desktop. */
 .newsletter-section {
   border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
   padding: 60px 20px !important;
@@ -958,9 +964,9 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
     flex-direction: column !important;
   }
 }
-}/* ============================================================
-   ARTICLES РІР‚вЂќ Р“В  coller Р“В  la fin de app/globals.css
-   Palette : turquoise #0097B2 Р’В· turquoise AA #006B80 Р’В· vert #7ED957
+/* ============================================================
+   ARTICLES — à coller à la fin de app/globals.css
+   Palette : turquoise #0097B2 · turquoise AA #006B80 · vert #7ED957
    ============================================================ */
 
 /* ---------- LISTING ---------- */
@@ -1173,7 +1179,7 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
   font-size: .98rem; line-height: 1.6; color: #4a5a60;
 }
 .membres-benefits li::before {
-  content: "РІСљвЂњ"; position: absolute; left: 0; top: 0;
+  content: "✓"; position: absolute; left: 0; top: 0;
   width: 22px; height: 22px; border-radius: 50%;
   background: rgba(126,217,87,.2); color: #2d6b1a;
   display: grid; place-items: center; font-size: .8rem; font-weight: 700;
@@ -1592,6 +1598,9 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
 /* ============================================================
    COURS DE LANGUES — sélecteur, leçons, fiches
    À coller à la fin de app/globals.css
+   FIX 2026-09 : sélecteurs .lang-btn préfixés par .lang-picker.
+   Sans ce scoping, ils écrasaient les .lang-btn (drapeaux) du
+   header et faisaient déborder le nav → burger hors écran.
    ============================================================ */
 
 /* ---------- Sélecteur de langue d'enseignement ---------- */
@@ -1607,15 +1616,15 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
 .lang-picker p { color: #cde7ec; font-size: .98rem; line-height: 1.6; margin: 0 auto 1.6rem; max-width: 56ch; }
 
 .lang-picker-btns { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; }
-.lang-btn {
+.lang-picker .lang-btn {
   display: inline-flex; align-items: center; gap: .6rem;
   padding: .8rem 1.5rem; border-radius: 999px; cursor: pointer;
   background: rgba(255,255,255,.08); border: 1.5px solid rgba(255,255,255,.22);
   color: #fff; font-size: 1rem; font-weight: 600; font-family: inherit;
   transition: background .15s ease, border-color .15s ease, transform .15s ease;
 }
-.lang-btn:hover { background: rgba(255,255,255,.15); transform: translateY(-2px); }
-.lang-btn.is-active {
+.lang-picker .lang-btn:hover { background: rgba(255,255,255,.15); transform: translateY(-2px); }
+.lang-picker .lang-btn.is-active {
   background: #0097b2; border-color: #7ed957; box-shadow: 0 0 0 3px rgba(126,217,87,.25);
 }
 .lang-btn-flag { font-size: 1.25rem; line-height: 1; }
