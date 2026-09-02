@@ -16,13 +16,13 @@ tags: ["cybersécurité", "sécurité en ligne", "arnaques", "protection des don
 
 ## Objectif d'apprentissage
 
-Après avoir lu cet article, vous serez en mesure d'identifier les arnaques en ligne les plus courantes, de comprendre pourquoi elles fonctionnent, et d'appliquer des pratiques concrètes pour protéger vos informations personnelles — dès aujourd'hui.
+Après avoir lu cet article, vous serez en mesure d'identifier les arnaques en ligne les plus courantes, de comprendre pourquoi elles fonctionnent, et d'appliquer des pratiques concrètes pour protéger vos informations personnelles, dès aujourd'hui.
 
 ---
 
 ## Une situation que vous reconnaîtrez peut-être
 
-Vous cherchez un nouvel ordinateur portable sur une marketplace. Une annonce attire votre œil : le dernier modèle, à un prix presque trop beau pour être vrai. Les avis semblent positifs. Vous cliquez. Vous commencez à saisir vos coordonnées bancaires — et quelque chose vous arrête. L'adresse du site paraît légèrement inhabituelle. La mise en page n'est pas tout à fait celle dont vous vous souvenez.
+Vous cherchez un nouvel ordinateur portable sur une marketplace. Une annonce attire votre œil : le dernier modèle, à un prix presque trop beau pour être vrai. Les avis semblent positifs. Vous cliquez. Vous commencez à saisir vos coordonnées bancaires, et quelque chose vous arrête. L'adresse du site paraît légèrement inhabituelle. La mise en page n'est pas tout à fait celle dont vous vous souvenez.
 
 Vous fermez l'onglet. Mais la question reste : *à quel point suis-je passé près de me faire avoir ?*
 
@@ -36,9 +36,9 @@ Ce type de situation arrive chaque jour à des personnes attentives et intellige
 
 Les escrocs créent des sites qui ressemblent à s'y méprendre aux sites légitimes. La différence tient souvent à un seul caractère dans l'adresse : `paypaI.com` au lieu de `paypal.com` (un « I » majuscule à la place du « l » minuscule), ou `.co` au lieu de `.com`.
 
-**Pourquoi cela arrive :** quand nous sommes concentrés sur une tâche — acheter, se connecter, répondre à un message — nous ne lisons pas chaque caractère d'une adresse.
+**Pourquoi cela arrive :** quand nous sommes concentrés sur une tâche (acheter, se connecter, répondre à un message), nous ne lisons pas chaque caractère d'une adresse.
 
-**Ce qu'il faut faire à la place :** avant de saisir des informations personnelles ou bancaires, faites une pause et lisez l'adresse complète. Et attention à une idée reçue : **le cadenas dans la barre d'adresse ne prouve pas qu'un site est légitime.** Il indique seulement que la connexion est chiffrée — la grande majorité des sites frauduleux affichent aujourd'hui ce cadenas eux aussi. Si quoi que ce soit vous semble inhabituel, fermez l'onglet et tapez vous-même l'adresse que vous connaissez.
+**Ce qu'il faut faire à la place :** avant de saisir des informations personnelles ou bancaires, faites une pause et lisez l'adresse complète. Et attention à une idée reçue : **le cadenas dans la barre d'adresse ne prouve pas qu'un site est légitime.** Il indique seulement que la connexion est chiffrée : la grande majorité des sites frauduleux affichent aujourd'hui ce cadenas eux aussi. Si quoi que ce soit vous semble inhabituel, fermez l'onglet et tapez vous-même l'adresse que vous connaissez.
 
 ---
 
@@ -54,11 +54,11 @@ Les e-mails et SMS d'hameçonnage (phishing) sont conçus pour créer un sentime
 
 ### Erreur 3 — Utiliser des mots de passe faibles ou identiques
 
-Réutiliser le même mot de passe sur plusieurs comptes est l'une des habitudes les plus répandues — et les plus dangereuses. Si un seul compte fuite, tous les autres deviennent immédiatement vulnérables : les pirates testent automatiquement les identifiants volés sur des centaines de services.
+Réutiliser le même mot de passe sur plusieurs comptes est l'une des habitudes les plus répandues, et les plus dangereuses. Si un seul compte fuite, tous les autres deviennent immédiatement vulnérables : les pirates testent automatiquement les identifiants volés sur des centaines de services.
 
 **Pourquoi cela arrive :** retenir de nombreux mots de passe différents est réellement difficile. Les mots de passe simples semblent plus faciles à vivre.
 
-**Ce qu'il faut faire à la place :** utilisez un gestionnaire de mots de passe — des outils comme **Bitwarden** (gratuit) ou **1Password** génèrent et stockent un mot de passe fort et unique pour chaque compte. Vous n'avez plus qu'un seul mot de passe principal à retenir : faites-en une phrase longue plutôt qu'un mot compliqué. Pour les mots de passe que vous créez encore à la main, visez au moins 12 caractères mêlant majuscules, minuscules, chiffres et symboles.
+**Ce qu'il faut faire à la place :** utilisez un gestionnaire de mots de passe. Des outils comme **Bitwarden** (gratuit) ou **1Password** génèrent et stockent un mot de passe fort et unique pour chaque compte. Vous n'avez plus qu'un seul mot de passe principal à retenir : faites-en une phrase longue plutôt qu'un mot compliqué. Pour les mots de passe que vous créez encore à la main, visez au moins 12 caractères mêlant majuscules, minuscules, chiffres et symboles.
 
 ---
 
@@ -68,17 +68,17 @@ Les mises à jour de sécurité existent parce que des failles ont été découv
 
 **Pourquoi cela arrive :** les mises à jour tombent toujours au mauvais moment, quand vous êtes en train de faire autre chose.
 
-**Ce qu'il faut faire à la place :** activez les mises à jour automatiques sur vos appareils et applications partout où c'est possible. Si vous préférez garder la main, fixez un rendez-vous hebdomadaire pour les vérifier — comme une routine, au même titre que fermer sa porte à clé.
+**Ce qu'il faut faire à la place :** activez les mises à jour automatiques sur vos appareils et applications partout où c'est possible. Si vous préférez garder la main, fixez un rendez-vous hebdomadaire pour les vérifier, comme une routine, au même titre que fermer sa porte à clé.
 
 ---
 
 ### Erreur 5 — Trop en dire sur les réseaux sociaux
 
-Beaucoup d'arnaques ne commencent ni par un faux site ni par un e-mail suspect. Elles commencent par des informations que vous avez déjà rendues publiques : nom complet, ville, employeur, date de naissance — des détails que les escrocs utilisent pour usurper une identité ou fabriquer des messages ciblés très convaincants.
+Beaucoup d'arnaques ne commencent ni par un faux site ni par un e-mail suspect. Elles commencent par des informations que vous avez déjà rendues publiques : nom complet, ville, employeur, date de naissance, des détails que les escrocs utilisent pour usurper une identité ou fabriquer des messages ciblés très convaincants.
 
 **Pourquoi cela arrive :** un profil de réseau social semble personnel et familier. On sous-estime facilement ce qui est visible par des inconnus.
 
-**Ce qu'il faut faire à la place :** passez en revue les paramètres de confidentialité de vos comptes et limitez la visibilité publique au strict nécessaire. Évitez surtout de publier ce qui répond aux questions de sécurité classiques — le nom de votre premier animal, le nom de jeune fille de votre mère, votre ville de naissance. Ces détails paraissent anodins ; ils servent régulièrement à contourner les procédures de récupération de compte.
+**Ce qu'il faut faire à la place :** passez en revue les paramètres de confidentialité de vos comptes et limitez la visibilité publique au strict nécessaire. Évitez surtout de publier ce qui répond aux questions de sécurité classiques : le nom de votre premier animal, le nom de jeune fille de votre mère, votre ville de naissance. Ces détails paraissent anodins ; ils servent régulièrement à contourner les procédures de récupération de compte.
 
 ---
 
@@ -86,11 +86,11 @@ Beaucoup d'arnaques ne commencent ni par un faux site ni par un e-mail suspect. 
 
 Les conseils de cybersécurité ne manquent pas, et la plupart sont utiles. Mais si vous ne deviez retenir que trois choses, retenez celles-ci :
 
-**1. Vérifiez avant de faire confiance.** Un site, un e-mail, un appel téléphonique — rien de tout cela ne prouve une identité à lui seul. En cas de doute, vérifiez par un autre canal dont vous êtes sûr : l'application officielle, le numéro au dos de votre carte bancaire, l'adresse que vous tapez vous-même.
+**1. Vérifiez avant de faire confiance.** Un site, un e-mail, un appel téléphonique : rien de tout cela ne prouve une identité à lui seul. En cas de doute, vérifiez par un autre canal dont vous êtes sûr : l'application officielle, le numéro au dos de votre carte bancaire, l'adresse que vous tapez vous-même.
 
 **2. Utilisez un gestionnaire de mots de passe.** Cette seule habitude couvre la majorité des risques liés aux comptes, et supprime le faux choix entre sécurité et confort.
 
-**3. Activez la double authentification (2FA).** Sur votre messagerie, votre banque et vos réseaux sociaux, la 2FA ajoute une deuxième vérification qui bloque la plupart des accès non autorisés — même si votre mot de passe a fuité. Préférez une application d'authentification au SMS quand c'est proposé, et si un service propose les *passkeys*, c'est encore mieux.
+**3. Activez la double authentification (2FA).** Sur votre messagerie, votre banque et vos réseaux sociaux, la 2FA ajoute une deuxième vérification qui bloque la plupart des accès non autorisés, même si votre mot de passe a fuité. Préférez une application d'authentification au SMS quand c'est proposé, et si un service propose les *passkeys*, c'est encore mieux.
 
 ---
 
@@ -106,9 +106,9 @@ Inutile de tout transformer du jour au lendemain. Voici un point de départ réa
 
 **Ce que « suffisamment bien » veut dire :**
 
-- **Débutant** — vous lisez les adresses avant de saisir quoi que ce soit, vous ne cliquez pas sur les liens inattendus, et vous avez vérifié la confidentialité de vos réseaux sociaux
-- **Intermédiaire** — vous utilisez un gestionnaire de mots de passe et la 2FA est active sur tous vos comptes importants
-- **Avancé** — vous faites un point régulier sur vos comptes et appareils, et vous vous tenez informé via des sources fiables comme [cybermalveillance.gouv.fr](https://www.cybermalveillance.gouv.fr), le dispositif national d'assistance aux victimes
+- **Débutant** : vous lisez les adresses avant de saisir quoi que ce soit, vous ne cliquez pas sur les liens inattendus, et vous avez vérifié la confidentialité de vos réseaux sociaux
+- **Intermédiaire** : vous utilisez un gestionnaire de mots de passe et la 2FA est active sur tous vos comptes importants
+- **Avancé** : vous faites un point régulier sur vos comptes et appareils, et vous vous tenez informé via des sources fiables comme [cybermalveillance.gouv.fr](https://www.cybermalveillance.gouv.fr), le dispositif national d'assistance aux victimes
 
 ---
 
@@ -120,7 +120,7 @@ Personne n'est à l'abri, et réagir vite change tout. Coordonnées bancaires co
 
 ## Une note honnête
 
-Prendre de bonnes habitudes de sécurité demande du temps. Il faut à la plupart des gens plusieurs semaines avant que les nouveaux réflexes deviennent automatiques. Il y aura des moments d'incertitude — quelque chose semble légitime, mais vous n'en êtes pas tout à fait sûr.
+Prendre de bonnes habitudes de sécurité demande du temps. Il faut à la plupart des gens plusieurs semaines avant que les nouveaux réflexes deviennent automatiques. Il y aura des moments d'incertitude : quelque chose semble légitime, mais vous n'en êtes pas tout à fait sûr.
 
 Cette incertitude est normale. C'est même le signe que vous faites attention. L'objectif n'est pas la perfection : c'est de rendre la tâche des escrocs beaucoup plus difficile.
 
