@@ -15,7 +15,8 @@ export type ArticleMeta = {
   date: string; category: Category; level: string; image: string;
   imageCredit?: string; fiche?: string; tags: string[]; draft: boolean;
 };
-export type Article = ArticleMeta & { contentHtml: string };
+export type TocItem = { id: string; text: string };
+export type Article = ArticleMeta & { contentHtml: string; toc: TocItem[] };
 
 export const CATEGORY_LABELS: Record<Category, Record<string, string>> = {
   "securite-en-ligne": { fr: "Sécurité Internet", en: "Internet Security", es: "Seguridad en Internet", bg: "Сигурност в интернет" },
@@ -25,6 +26,59 @@ export const CATEGORY_LABELS: Record<Category, Record<string, string>> = {
 export const CATEGORY_ORDER: Category[] = ["securite-en-ligne", "reseaux-sociaux", "ia"];
 
 const strip = (s: string) => s.replace(/\.md$/, "").replace(/^\d+-/, "");
+
+/**
+ * Slug d'un titre, pour servir d'ancre. `\p{L}` couvre le cyrillique : un titre
+ * bulgare donne un id valide (« Учебна цел » -> « учебна-цел »).
+ */
+const slugifyHeading = (text: string) =>
+  text
+    .toLowerCase()
+    // Les diacritiques ne sautent que sur le latin (é -> e). En cyrillique,
+    // « й » est une lettre distincte, pas un « и » accentué : on la garde.
+    .replace(/\p{Script=Latin}+/gu, (run) =>
+      run.normalize("NFD").replace(/[\u0300-\u036f]/g, ""),
+    )
+    .replace(/[^\p{L}\p{N}]+/gu, "-")
+    .replace(/^-+|-+$/g, "");
+
+/**
+ * Ajoute un `id` sur chaque `<h2>` du corps et renvoie le sommaire.
+ *
+ * Post-traitement volontaire plutôt que rehype-slug : brancher rehype
+ * imposerait de remplacer remark-html par remark-rehype + rehype-stringify,
+ * dont le sérialiseur reformaterait tout le HTML des articles existants.
+ * Ici, seuls les `<h2>` sont modifiés — remark-html les émet sans attribut,
+ * et aucun markdown ne contient de `<h2>` brut.
+ */
+function withHeadingIds(source: string): { html: string; toc: TocItem[] } {
+  const toc: TocItem[] = [];
+  const used = new Set<string>();
+
+  const html = source.replace(/<h2>([\s\S]*?)<\/h2>/g, (_m, inner: string) => {
+    const text = inner.replace(/<[^>]+>/g, "").trim();
+    const base = slugifyHeading(text) || `section-${toc.length + 1}`;
+
+    let id = base;
+    for (let i = 2; used.has(id); i++) id = `${base}-${i}`;
+    used.add(id);
+
+    toc.push({ id, text });
+    return `<h2 id="${id}">${inner}</h2>`;
+  });
+
+  return { html, toc };
+}
+
+/** Temps de lecture en minutes, calculé sur le corps rendu (200 mots/minute). */
+export function getReadingMinutes(contentHtml: string): number {
+  const words = contentHtml
+    .replace(/<[^>]+>/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
 
 function parse(raw: string, file: string, lang: string): ArticleMeta {
   const { data } = matter(raw);
@@ -70,7 +124,8 @@ export async function getArticle(lang: string, slug: string): Promise<Article | 
   // le bouton fiche, le sommaire du parcours et la navigation précédent/suivant.
   content = content.split(/\n#{2,3}\s*(?:Pour aller plus loin|Para ir más lejos|To go further|За да продължите)\s*\n/i)[0].trimEnd();
   const processed = await remark().use(html, { sanitize: false }).process(content);
-  return { ...meta, contentHtml: processed.toString() };
+  const { html: contentHtml, toc } = withHeadingIds(processed.toString());
+  return { ...meta, contentHtml, toc };
 }
 
 export function getSiblings(lang: string, slug: string) {

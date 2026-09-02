@@ -27,7 +27,10 @@ img { max-width: 100%; display: block; }
    HEADER & NAV
    ================================================================ */
 header { position: sticky; top: 0; z-index: 100; background: var(--white); box-shadow: 0 2px 20px rgba(12,192,223,0.12); }
-nav { max-width: 1280px; margin: auto; padding: 0 24px; height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+/* Scope au header : ce sélecteur d'élément nu s'appliquait à TOUS les <nav>
+   du site (sommaire d'article, parcours, navigation précédent/suivant),
+   auxquels il imposait height: 70px et display: flex. */
+header nav { max-width: 1280px; margin: auto; padding: 0 24px; height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .nav-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 .nav-logo img { height: 65px; width: auto; }
 .nav-links { display: flex; gap: 2px; align-items: center; }
@@ -547,7 +550,7 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
   .burger { display: flex; }
   .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: white; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); gap: 6px; z-index: 200; }
   /* FIX 2026-09 : header compact — le burger sortait de l'écran sur ~412px */
-  nav { padding: 0 14px; gap: 6px; }
+  header nav { padding: 0 14px; gap: 6px; }
   .nav-logo img { height: 42px; }
   .lang-switcher { gap: 2px; }
   .hero { padding: 60px 20px 70px; }
@@ -1047,6 +1050,7 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
 .article-body { font-size: 1.05rem; line-height: 1.75; color: #233238; }
 .article-body h1 { display: none; } /* le titre H1 vient du frontmatter */
 .article-body h2 {
+  scroll-margin-top: 90px;
   font-family: var(--font-poppins), sans-serif;
   font-size: 1.55rem; line-height: 1.3; color: #14303c;
   margin: 2.75rem 0 1rem; padding-bottom: .5rem;
@@ -1100,6 +1104,80 @@ footer { background: var(--dark); color: white; padding: 60px 30px 30px; }
   .article-nav { flex-direction: column; }
   .article-nav a { max-width: 100%; }
   .article-nav-next { text-align: left; align-items: flex-start; }
+}
+
+/* Temps de lecture */
+.article-readtime {
+  display: inline-flex; align-items: center; gap: .4rem;
+  margin: -1.4rem 0 2rem; color: #6b7f87; font-size: .85rem; font-weight: 600;
+}
+.article-readtime::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: #0097b2; flex: none;
+}
+
+/* Sommaire */
+.article-toc {
+  margin: 0 0 2.5rem; padding: 0;
+  background: #f7fbfc; border: 1px solid #e2ecef; border-radius: 14px;
+}
+.article-toc details { padding: 1.1rem 1.5rem; }
+.article-toc summary {
+  cursor: pointer; list-style: none;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 1rem; font-weight: 700; color: #14303c;
+  display: flex; align-items: center; gap: .5rem;
+}
+.article-toc summary::-webkit-details-marker { display: none; }
+.article-toc summary::before {
+  content: ""; flex: none; width: 0; height: 0;
+  border-left: 6px solid #0097b2;
+  border-top: 5px solid transparent; border-bottom: 5px solid transparent;
+  transition: transform .2s ease;
+}
+.article-toc details[open] summary::before { transform: rotate(90deg); }
+.article-toc summary:focus-visible { outline: 3px solid #006b80; outline-offset: 3px; border-radius: 6px; }
+.article-toc ol { margin: .9rem 0 0; padding-left: 1.3rem; }
+.article-toc li { margin-bottom: .45rem; font-size: .95rem; line-height: 1.45; }
+.article-toc li::marker { color: #0097b2; font-weight: 700; }
+.article-toc a { color: #006b80; text-decoration: none; }
+.article-toc a:hover { text-decoration: underline; color: #0097b2; }
+.article-toc a:focus-visible { outline: 3px solid #006b80; outline-offset: 2px; border-radius: 4px; }
+
+/* Partage */
+.article-share {
+  margin: 2.5rem 0 0; padding: 1.35rem 1.5rem;
+  background: #f7fbfc; border: 1px solid #e2ecef; border-radius: 14px;
+  display: flex; align-items: center; flex-wrap: wrap; gap: .9rem 1.25rem;
+}
+.article-share-title {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: .95rem; font-weight: 700; color: #14303c;
+}
+.article-share-btns { display: flex; flex-wrap: wrap; gap: .55rem; }
+.article-share-btn {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .5rem .9rem;
+  background: #fff; border: 1px solid #e2ecef; border-radius: 999px;
+  color: #14303c; font-family: inherit; font-size: .85rem; font-weight: 600;
+  text-decoration: none; cursor: pointer;
+  transition: border-color .15s ease, color .15s ease, background .15s ease;
+}
+.article-share-btn svg { flex: none; }
+.article-share-btn:hover { border-color: #0097b2; color: #006b80; background: #fff; }
+.article-share-btn:focus-visible { outline: 3px solid #006b80; outline-offset: 3px; }
+.article-share-copy.is-copied {
+  border-color: #7ed957; color: #2d6b1a; background: rgba(126,217,87,.14);
+}
+
+@media (max-width: 640px) {
+  .article-share { flex-direction: column; align-items: flex-start; gap: .8rem; }
+  .article-share-btns { width: 100%; }
+  .article-share-btn { flex: 1 1 auto; justify-content: center; }
+  .article-toc details { padding: 1rem 1.15rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .article-toc summary::before, .article-share-btn { transition: none; }
 }
 
 /* ============================================================

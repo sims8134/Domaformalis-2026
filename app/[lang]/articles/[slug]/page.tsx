@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
-import { getArticle, getSiblings, getAllParams, CATEGORY_LABELS, resolveSlugInLang, getArticlePathsByLang } from "@/app/lib/articles";
+import { getArticle, getSiblings, getAllParams, CATEGORY_LABELS, resolveSlugInLang, getArticlePathsByLang, getReadingMinutes } from "@/app/lib/articles";
+import CopyLinkButton from "@/components/CopyLinkButton";
 import { getDictionary } from "@/app/lib/get-dictionary";
 import { BASE_URL, buildAlternates } from "@/app/lib/seo";
 
@@ -19,6 +20,27 @@ const T: Record<string, Record<string, string>> = {
   prev: { fr: "Précédent", en: "Previous", es: "Anterior", bg: "Предишна" },
   next: { fr: "Suivant", en: "Next", es: "Siguiente", bg: "Следваща" },
   serie: { fr: "Dans ce parcours", en: "In this track", es: "En este itinerario", bg: "В тази пътека" },
+  readtime: {
+    fr: "{n} min de lecture",
+    en: "{n} min read",
+    es: "{n} min de lectura",
+    bg: "{n} мин четене",
+  },
+  toc: { fr: "Sommaire", en: "Contents", es: "Sumario", bg: "Съдържание" },
+  tocAria: {
+    fr: "Sommaire de l'article",
+    en: "Article contents",
+    es: "Sumario del artículo",
+    bg: "Съдържание на статията",
+  },
+  share: {
+    fr: "Partager cet article",
+    en: "Share this article",
+    es: "Compartir este artículo",
+    bg: "Споделете статията",
+  },
+  copy: { fr: "Copier le lien", en: "Copy link", es: "Copiar el enlace", bg: "Копирай връзката" },
+  copied: { fr: "Copié !", en: "Copied!", es: "¡Copiado!", bg: "Копирано!" },
 };
 const t = (k: string, lang: string) => T[k][lang] ?? T[k].fr;
 
@@ -85,6 +107,40 @@ export default async function ArticlePage({
   const { prev, next, serie } = getSiblings(lang, slug);
   const catLabel = CATEGORY_LABELS[article.category]?.[lang] ?? "";
 
+  const minutes = getReadingMinutes(article.contentHtml);
+  const shareUrl = `${BASE_URL}/${lang}/articles/${slug}`;
+  const shareTitle = article.title;
+  const u = encodeURIComponent(shareUrl);
+  const ti = encodeURIComponent(shareTitle);
+
+  // Uniquement des liens https : aucun SDK, aucun script tiers, aucun cookie.
+  const shareLinks = [
+    {
+      key: "facebook",
+      label: "Facebook",
+      href: `https://www.facebook.com/sharer/sharer.php?u=${u}`,
+      path: "M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.6A19 19 0 0 0 14.8 2.5C12.4 2.5 10.8 4 10.8 6.5v2H8.3V12h2.5v9h3.2v-9h2.5l.4-3.5H14z",
+    },
+    {
+      key: "x",
+      label: "X",
+      href: `https://x.com/intent/tweet?url=${u}&text=${ti}`,
+      path: "M17.3 3h3.3l-7.2 8.3L22 21h-6.6l-5.2-6.8L4.2 21H.9l7.7-8.8L.6 3h6.8l4.7 6.2L17.3 3zm-1.2 16h1.8L6.9 4.8H5l11.1 14.2z",
+    },
+    {
+      key: "linkedin",
+      label: "LinkedIn",
+      href: `https://www.linkedin.com/shareArticle?mini=true&url=${u}&title=${ti}`,
+      path: "M6.9 21H3.6V8.9h3.3V21zM5.2 7.4A1.9 1.9 0 1 1 5.2 3.6a1.9 1.9 0 0 1 0 3.8zM21 21h-3.3v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H10V8.9h3.2v1.7h.1a3.5 3.5 0 0 1 3.1-1.7c3.4 0 4.6 2.2 4.6 5.1V21z",
+    },
+    {
+      key: "whatsapp",
+      label: "WhatsApp",
+      href: `https://wa.me/?text=${encodeURIComponent(`${shareTitle} ${shareUrl}`)}`,
+      path: "M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8s-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.4-.1-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c2.1.8 2.1.6 2.5.5a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z",
+    },
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -118,6 +174,9 @@ export default async function ArticlePage({
           <span className="article-cat">{catLabel}</span>
           <h1>{article.title}</h1>
           <p className="article-lead">{article.description}</p>
+          <p className="article-readtime">
+            {t("readtime", lang).replace("{n}", String(minutes))}
+          </p>
         </div>
 
         {article.image && (
@@ -134,6 +193,21 @@ export default async function ArticlePage({
           </div>
         )}
 
+        {article.toc.length > 1 && (
+          <nav className="article-toc" aria-label={t("tocAria", lang)}>
+            <details open>
+              <summary>{t("toc", lang)}</summary>
+              <ol>
+                {article.toc.map((h) => (
+                  <li key={h.id}>
+                    <a href={`#${h.id}`}>{h.text}</a>
+                  </li>
+                ))}
+              </ol>
+            </details>
+          </nav>
+        )}
+
         <div
           className="article-body"
           dangerouslySetInnerHTML={{ __html: article.contentHtml }}
@@ -146,6 +220,32 @@ export default async function ArticlePage({
             </a>
           </p>
         )}
+
+        <div className="article-share">
+          <span className="article-share-title">{t("share", lang)}</span>
+          <div className="article-share-btns">
+            {shareLinks.map((sl) => (
+              <a
+                key={sl.key}
+                className={`article-share-btn article-share-${sl.key}`}
+                href={sl.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${t("share", lang)} — ${sl.label}`}
+              >
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                  <path d={sl.path} fill="currentColor" />
+                </svg>
+                <span>{sl.label}</span>
+              </a>
+            ))}
+            <CopyLinkButton
+              url={shareUrl}
+              label={t("copy", lang)}
+              copiedLabel={t("copied", lang)}
+            />
+          </div>
+        </div>
 
         {serie.length > 1 && (
           <nav className="article-serie">
