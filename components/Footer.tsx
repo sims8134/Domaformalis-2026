@@ -1,4 +1,5 @@
 import NewsletterForm from "./NewsletterForm";
+import { FacebookIcon, XIcon, InstagramIcon } from "./SocialIcons";
 
 interface FooterProps {
   lang: string;
@@ -35,9 +36,9 @@ export default function Footer({ lang, dict }: FooterProps) {
               <img src="/img/logo_domaformalis.png" alt="Domaformalis" />
               <p>{footer?.tagline || "Easy training for everyone, everywhere."}</p>
               <div className="footer-social">
-                <a href="https://www.facebook.com/profile.php?id=61577432794087" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">📱</a>
-                <a href="https://x.com/domaformalis" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="X (Twitter)">🐦</a>
-                <a href="https://www.instagram.com/domaformalis" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">📸</a>
+                <a href="https://www.facebook.com/profile.php?id=61577432794087" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook"><FacebookIcon /></a>
+                <a href="https://x.com/domaformalis" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="X (Twitter)"><XIcon /></a>
+                <a href="https://www.instagram.com/domaformalis" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram"><InstagramIcon /></a>
               </div>
             </div>
 

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { getDictionary } from "../../lib/get-dictionary";
+import { FacebookIcon, XIcon, InstagramIcon } from "@/components/SocialIcons";
 
 export default function ContactPage() {
   const params = useParams();
@@ -153,9 +154,9 @@ export default function ContactPage() {
                   <h3>{c.info.social_title}</h3>
                 </div>
                 <div className="social-row">
-                  <a href="#" className="social-btn">📘 Facebook</a>
-                  <a href="#" className="social-btn">📸 Instagram</a>
-                  <a href="#" className="social-btn">🐦 Twitter</a>
+                  <a href="https://www.facebook.com/profile.php?id=61577432794087" target="_blank" rel="noopener noreferrer" className="social-btn"><FacebookIcon /> Facebook</a>
+                  <a href="https://www.instagram.com/domaformalis" target="_blank" rel="noopener noreferrer" className="social-btn"><InstagramIcon /> Instagram</a>
+                  <a href="https://x.com/domaformalis" target="_blank" rel="noopener noreferrer" className="social-btn"><XIcon /> X</a>
                 </div>
               </div>
             </div>
