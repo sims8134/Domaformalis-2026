@@ -6,9 +6,12 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { lastname, firstname, email, subject, message, rgpd, honeypot } = body;
 
-    // Honeypot check
+    // Honeypot : on renvoie 200 sans envoyer, pour ne pas renseigner les bots.
+    // C'est le seul chemin « 200 sans e-mail » du code : il doit etre visible
+    // dans les logs, sinon un faux positif (autofill) est indetectable.
     if (honeypot) {
-      return NextResponse.json({ ok: true });
+      console.warn("[contact] honeypot rempli — message ignore, aucun e-mail envoye");
+      return NextResponse.json({ ok: true, skipped: "honeypot" });
     }
 
     // Validation
@@ -56,10 +59,15 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true });
   } catch (error) {
-    console.error("Contact error:", error);
+    // L'envoi est await-e plus haut : toute erreur SMTP arrive ici et devient
+    // un 502. Jamais de 200 si l'e-mail n'est pas parti.
+    console.error("[contact] envoi impossible", {
+      error: error instanceof Error ? `${error.name}: ${error.message}` : String(error),
+    });
+    const smtp = error instanceof Error && /SMTP|ECONN|ETIMEDOUT|EAUTH|Configuration SMTP/i.test(error.message);
     return NextResponse.json(
-      { ok: false, error: "server_error" },
-      { status: 500 }
+      { ok: false, error: smtp ? "mail_not_sent" : "server_error" },
+      { status: smtp ? 502 : 500 }
     );
   }
 }
