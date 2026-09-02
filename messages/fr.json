@@ -179,7 +179,7 @@
     "hero": {
       "tag": "📩 CONTACTEZ-NOUS",
       "title": "Parlons de votre <span>projet</span>",
-      "desc": "Une question, une demande de devis ou simplement envie d'en savoir plus ? Écrivez-nous, nous répondons rapidement !"
+      "desc": "Une question, une proposition de partenariat ou simplement envie d'en savoir plus ? Écrivez-nous, nous répondons rapidement !"
     },
     "info": {
       "email_title": "E-mail",
@@ -199,7 +199,7 @@
       "subject": "Sujet",
       "subject_placeholder": "-- Choisissez un sujet --",
       "subject_options": {
-        "devis": "Demande de devis",
+        "partenariat": "Partenariat / collaboration",
         "info": "Demande d'information",
         "langues": "Cours de langues",
         "it": "Formation informatique",
@@ -225,24 +225,24 @@
     "title": "Questions fréquentes",
     "items": [
       {
-        "q": "Comment recevoir ma formation après commande ?",
-        "a": "Après confirmation de votre demande et règlement, vous recevrez votre formation en PDF directement par e-mail, généralement dans les 24 heures."
+        "q": "Comment accéder aux formations ?",
+        "a": "Tout est en ligne, gratuit et sans inscription : parcours, leçons et fiches de rappel sont accessibles directement depuis le site. Les fiches et les guides PDF se téléchargent en un clic, sans compte à créer."
       },
       {
         "q": "Les formations sont-elles adaptées aux grands débutants ?",
         "a": "Oui, absolument ! Nos formations sont conçues pour être accessibles à tous, même à ceux qui n'ont jamais utilisé un ordinateur ou appris une langue étrangère."
       },
       {
-        "q": "Puis-je acheter plusieurs formations en même temps ?",
-        "a": "Bien sûr ! Contactez-nous via ce formulaire en précisant les formations souhaitées, nous vous préparerons un devis groupé."
+        "q": "Dois-je suivre les parcours dans un ordre précis ?",
+        "a": "Non, chaque parcours est indépendant : commencez par celui qui vous concerne. À l'intérieur d'un parcours, les leçons sont numérotées dans un ordre pensé pour progresser, mais rien ne vous empêche d'ouvrir librement celle qui vous intéresse."
       },
       {
-        "q": "Y a-t-il un suivi ou un accompagnement après l'achat ?",
-        "a": "Oui, nous restons disponibles par e-mail pour répondre à vos questions sur le contenu de la formation que vous avez achetée."
+        "q": "Puis-je poser des questions ou être accompagné ?",
+        "a": "Oui, écrivez-nous via le formulaire de contact : nous répondons sous 24 à 48 heures. Vous pouvez aussi passer par l'espace membres pour recevoir les guides PDF dès leur sortie."
       },
       {
         "q": "Les formations sont-elles disponibles en plusieurs langues ?",
-        "a": "Pour l'instant, les supports informatiques sont en français. Les cours de langues (Espagnol, Bulgare, Anglais) sont conçus pour des apprenants francophones."
+        "a": "Oui. Le site et l'ensemble des articles existent en français, anglais, espagnol et bulgare. Les cours de langues proposent en plus le choix de la langue d'enseignement des documents."
       }
     ]
   },
@@ -825,8 +825,7 @@
     },
     "course_card": {
       "access": "Accéder au cours",
-      "ask": "Nous contacter →",
-      "buy": "Acheter"
+      "ask": "Nous contacter →"
     },
     "MembresPage": {
       "title": "Être informé du lancement",

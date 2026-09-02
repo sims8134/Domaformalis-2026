@@ -178,7 +178,7 @@
     "hero": {
       "tag": "📩 CONTÁCTANOS",
       "title": "Hablemos de tu <span>proyecto</span>",
-      "desc": "¿Una pregunta, una solicitud de presupuesto o simplemente ganas de saber más? Escríbenos, ¡respondemos rápido!"
+      "desc": "¿Una pregunta, una propuesta de colaboración o simplemente ganas de saber más? Escríbenos, ¡respondemos rápido!"
     },
     "info": {
       "email_title": "Correo electrónico",
@@ -198,7 +198,7 @@
       "subject": "Asunto",
       "subject_placeholder": "-- Elige un asunto --",
       "subject_options": {
-        "devis": "Solicitud de presupuesto",
+        "partenariat": "Colaboración / alianza",
         "info": "Solicitud de información",
         "langues": "Cursos de idiomas",
         "it": "Formación informática",
@@ -224,24 +224,24 @@
     "title": "Preguntas frecuentes",
     "items": [
       {
-        "q": "¿Cómo recibo mi formación después del pedido?",
-        "a": "Después de la confirmación de tu solicitud y del pago, recibirás tu formación en PDF directamente por correo electrónico, generalmente dentro de las 24 horas."
+        "q": "¿Cómo accedo a las formaciones?",
+        "a": "Todo está en línea, es gratuito y no requiere registro: itinerarios, lecciones y fichas de repaso están disponibles directamente en el sitio. Las fichas y las guías en PDF se descargan con un clic, sin crear ninguna cuenta."
       },
       {
         "q": "¿Las formaciones son adecuadas para principiantes absolutos?",
         "a": "Sí, ¡absolutamente! Nuestras formaciones están diseñadas para ser accesibles a todos, incluso a quienes nunca han usado un ordenador o aprendido un idioma extranjero."
       },
       {
-        "q": "¿Puedo comprar varias formaciones al mismo tiempo?",
-        "a": "¡Claro! Contáctanos a través de este formulario indicando las formaciones deseadas y te prepararemos un presupuesto agrupado."
+        "q": "¿Debo seguir los itinerarios en un orden concreto?",
+        "a": "No, cada itinerario es independiente: empieza por el que te concierne. Dentro de un itinerario las lecciones están numeradas en un orden pensado para progresar, pero puedes abrir libremente la que te interese."
       },
       {
-        "q": "¿Hay seguimiento o acompañamiento después de la compra?",
-        "a": "Sí, seguimos disponibles por correo electrónico para responder a tus preguntas sobre el contenido de la formación que hayas comprado."
+        "q": "¿Puedo hacer preguntas o recibir acompañamiento?",
+        "a": "Sí, escríbenos con el formulario de contacto: respondemos en 24 a 48 horas. También puedes pasar por el espacio de miembros para recibir las guías en PDF en cuanto salgan."
       },
       {
         "q": "¿Las formaciones están disponibles en varios idiomas?",
-        "a": "Por el momento, los materiales informáticos están en francés. Los cursos de idiomas (Español, Búlgaro, Inglés) están diseñados para estudiantes francófonos."
+        "a": "Sí. El sitio y todos los artículos existen en francés, inglés, español y búlgaro. Además, los cursos de idiomas permiten elegir el idioma en el que se explican los documentos."
       }
     ]
   },
@@ -824,8 +824,7 @@
     },
     "course_card": {
       "access": "Acceder al curso",
-      "ask": "Contáctanos →",
-      "buy": "Comprar"
+      "ask": "Contáctanos →"
     },
     "MembresPage": {
       "title": "Recibir información sobre el lanzamiento",

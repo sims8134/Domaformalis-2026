@@ -150,7 +150,7 @@
     "hero": {
       "tag": "📩 CONTACT US",
       "title": "Let's talk about your <span>project</span>",
-      "desc": "A question, a quote request, or simply want to know more? Write to us — we reply quickly!"
+      "desc": "A question, a partnership proposal, or simply want to know more? Write to us — we reply quickly!"
     },
     "info": {
       "email_title": "E-mail",
@@ -170,7 +170,7 @@
       "subject": "Subject",
       "subject_placeholder": "-- Choose a subject --",
       "subject_options": {
-        "devis": "Quote request",
+        "partenariat": "Partnership / collaboration",
         "info": "Information request",
         "langues": "Language courses",
         "it": "IT training",
@@ -196,24 +196,24 @@
     "title": "Frequently asked questions",
     "items": [
       {
-        "q": "How do I receive my course after ordering?",
-        "a": "After your request is confirmed and payment is received, you will receive your course as a PDF directly by e-mail, usually within 24 hours."
+        "q": "How do I access the courses?",
+        "a": "Everything is online, free and needs no sign-up: tracks, lessons and cheat sheets are available straight from the site. The PDF sheets and guides download in one click, with no account to create."
       },
       {
         "q": "Are the courses suitable for complete beginners?",
         "a": "Yes, absolutely! Our courses are designed to be accessible to everyone, even people who have never used a computer or learned a foreign language."
       },
       {
-        "q": "Can I buy several courses at the same time?",
-        "a": "Of course! Contact us through this form and specify the courses you want, and we will prepare a grouped quote for you."
+        "q": "Do I have to follow the tracks in a particular order?",
+        "a": "No, each track stands on its own, so start with the one that concerns you. Within a track the lessons are numbered in a deliberate order, but you are free to open whichever one you need."
       },
       {
-        "q": "Is there any follow-up or support after purchase?",
-        "a": "Yes, we remain available by e-mail to answer your questions about the content of the course you bought."
+        "q": "Can I ask questions or get support?",
+        "a": "Yes, write to us through the contact form and we reply within 24 to 48 hours. You can also use the members area to receive the PDF guides as soon as they come out."
       },
       {
-        "q": "Are the courses available in multiple languages?",
-        "a": "For now, the IT materials are in French. The language courses (Spanish, Bulgarian, English) are designed for French-speaking learners."
+        "q": "Are the courses available in several languages?",
+        "a": "Yes. The site and all the articles exist in French, English, Spanish and Bulgarian. The language courses additionally let you choose the language the documents are taught in."
       }
     ]
   },
@@ -796,8 +796,7 @@
     },
     "course_card": {
       "access": "Access course",
-      "ask": "Contact us →",
-      "buy": "Buy"
+      "ask": "Contact us →"
     },
     "MembresPage": {
       "title": "Be notified about the launch",
